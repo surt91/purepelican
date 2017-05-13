@@ -12,10 +12,14 @@
 {% endif %}
 <meta name="twitter:title" content="{{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %}">
 <meta name="twitter:description" content="{{article.summary|striptags|e}}">
-{% if article.featured_image %}
+{% if article.featuredimage %}
 {# I want to use relative urls in the markdown files #}
 <meta property="og:image" content="{{ SITEURL }}/{{article.featuredimage}}" />
 <meta name="twitter:image" content="{{ SITEURL }}/{{article.featuredimage}}" >
+{% elif article.largefeaturedimage%}
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="{{ SITEURL }}/{{article.largefeaturedimage}}" />
+<meta name="twitter:image" content="{{ SITEURL }}/{{article.largefeaturedimage}}" >
 {% else %}
 {% from '_includes/_defaults.html' import FEATURED_IMAGE with context %}
     {% if FEATURED_IMAGE %}
