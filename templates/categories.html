@@ -1,28 +1,12 @@
 {% extends 'base.html' %}
 
 {% block title %}
-All Categories · {{ super() }}
+Kategorien · {{ super() }}
 {% endblock title %}
 
 {% block head_description %}
-All categories of the {{ SITENAME|striptags|e }} blog. 
+Kategorien von {{ SITENAME|striptags|e }}.
 {% endblock head_description %}
-
-{% block meta_tags_in_head %}
-{{ super() }}
-<meta property="og:title" content="All Categories · {{ SITENAME|striptags|e }}"/>
-<meta name="twitter:title" content="All Categories · {{ SITENAME|striptags|e }}">
-<meta property="og:url" content="{{ SITEURL }}/categories.html" />
-<meta property="og:description" content="All categories of the {{ SITENAME|striptags|e }} blog" />
-<meta name="twitter:description" content="All categories of the {{ SITENAME|striptags|e }} blog">
-<meta property="og:site_name" content="{{ SITENAME|striptags|e }}" />
-<meta property="og:article:author" content="{{ AUTHOR }}" />
-{% from '_includes/_defaults.html' import FEATURED_IMAGE with context %}
-{% if FEATURED_IMAGE %}
-<meta property="og:image" content="{{FEATURED_IMAGE}}" />
-<meta name="twitter:image" content="{{FEATURED_IMAGE}}" >
-{% endif %}
-{% endblock meta_tags_in_head %}
 
 {% block feed_links %}
 {{ super() }}
@@ -51,7 +35,7 @@ All categories of the {{ SITENAME|striptags|e }} blog.
                 <div id="{{ category.slug }}-ref" class="accordion-body collapse">
                     <div class="accordion-inner">
                         <ul class="list-articles-category">
-                            {% for article in articles %} 
+                            {% for article in articles %}
                             <li><time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></li>
                             {% endfor %}
                         </ul>
@@ -74,6 +58,6 @@ All categories of the {{ SITENAME|striptags|e }} blog.
 </script>
 
 <script type="text/javascript" language="JavaScript">
-    uncollapse(); 
+    uncollapse();
 </script>
 {% endblock script %}

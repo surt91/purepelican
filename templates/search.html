@@ -1,36 +1,25 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Search · {{ super() }}
+Suche · {{ super() }}
 {% endblock title %}
 
 {% block head_description %}
-Search results for {{ SITENAME|striptags|e }} blog.
+Suchergebnisse.
 {% endblock head_description %}
 
-{% block meta_tags_in_head %}
-{{ super() }}
-<meta property="og:title" content="Search · {{ SITENAME|striptags|e }}"/>
-<meta name="twitter:title" content="Search · {{ SITENAME|striptags|e }}">
-<meta property="og:url" content="{{ SITEURL }}/search.html" />
-<meta property="og:description" content="Search results for {{ SITENAME|striptags|e }} blog" />
-<meta name="twitter:description" content="Search results for {{ SITENAME|striptags|e }} blog">
-<meta property="og:site_name" content="{{ SITENAME|striptags|e }}" />
-<meta property="og:article:author" content="{{ AUTHOR }}" />
-{% from '_includes/_defaults.html' import FEATURED_IMAGE with context %}
-{% if FEATURED_IMAGE %}
-<meta property="og:image" content="{{FEATURED_IMAGE}}" />
-<meta name="twitter:image" content="{{FEATURED_IMAGE}}" >
-{% endif %}
-{% endblock meta_tags_in_head %}
-
 {% block script %}
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     {% if 'assets' in PLUGINS %}
-    {% include '_includes/minify_tipuesearch.html' with context %}
+        {% assets filters="rjsmin", output="tipuesearch/tipuesearch.packed.min.js",
+                "tipuesearch/tipuesearch_set.js",
+                "tipuesearch/tipuesearch.min.js"
+        %}
+            <script type="text/javascript" src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+        {% endassets %}
     {% else %}
-<script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
-<script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
+        <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
+        <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
     {% endif %}
 <script>
 $(document).ready(function() {
@@ -55,8 +44,10 @@ $(document).ready(function() {
 
 {% block content %}
 <article>
-    <div class="span8 offset2">
-        <div id="tipue_search_content"><div id="tipue_search_loading"></div></div>
+    <div class="pure-u-md-3-4">
+        <div id="tipue_search_content">
+            <div id="tipue_search_loading"></div>
+        </div>
     </div>
 </article>
 {% endblock content %}
