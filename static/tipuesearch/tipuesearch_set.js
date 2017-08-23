@@ -54,21 +54,21 @@ var tipuesearch_related = {'searches': [
 
 // Internal strings
 
-var tipuesearch_string_1 = 'No title';
-var tipuesearch_string_2 = 'Showing results for';
-var tipuesearch_string_3 = 'Search instead for';
-var tipuesearch_string_4 = '1 result';
-var tipuesearch_string_5 = 'results';
-var tipuesearch_string_6 = 'Back';
-var tipuesearch_string_7 = 'More';
-var tipuesearch_string_8 = 'Nothing found.';
-var tipuesearch_string_9 = 'Common words are largely ignored.';
-var tipuesearch_string_10 = 'Search too short';
-var tipuesearch_string_11 = 'Should be one character or more.';
-var tipuesearch_string_12 = 'Should be';
-var tipuesearch_string_13 = 'characters or more.';
-var tipuesearch_string_14 = 'seconds';
-var tipuesearch_string_15 = 'Searches related to';
+var tipuesearch_string_1 = 'Kein Titel';
+var tipuesearch_string_2 = 'Zeige Ergebnisse für';
+var tipuesearch_string_3 = 'Suche stattdessen nach';
+var tipuesearch_string_4 = '1 Ergebnis';
+var tipuesearch_string_5 = 'Ergebnisse';
+var tipuesearch_string_6 = 'Zurück';
+var tipuesearch_string_7 = 'Mehr';
+var tipuesearch_string_8 = 'Keine Suchergebnisse.';
+var tipuesearch_string_9 = 'Übliche Wörter werden ignoriert.';
+var tipuesearch_string_10 = 'Suchbegriff zu kurz';
+var tipuesearch_string_11 = 'Es sollte ein Buchstabe oder mehr sein.';
+var tipuesearch_string_12 = 'Es sollten';
+var tipuesearch_string_13 = 'Buchstaben oder mehr sein.';
+var tipuesearch_string_14 = 'Sekunden';
+var tipuesearch_string_15 = 'Suche im Zusammenhang mit';
 
 
 // Internals
@@ -77,4 +77,3 @@ var tipuesearch_string_15 = 'Searches related to';
 // Timer for showTime
 
 var startTimer = new Date().getTime();
-
