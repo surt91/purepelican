@@ -107,6 +107,7 @@ http://www.tipue.com/search
 }
 .tipue_search_content_url
 {
+    display: none;
     word-wrap: break-word;
     hyphens: auto;
 }
