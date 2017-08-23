@@ -1,108 +1,135 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8"> 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% if article and article.author %}
-        <meta name="author" content="{{ article.author }}" />
-        <meta name="copyright" content="{{ article.author }}" />
-        {% elif page and page.author %}
-        <meta name="author" content="{{ page.author }}" />
-        <meta name="copyright" content="{{ page.author }}" />
-        {% else %}
-        <meta name="author" content="{{ AUTHOR }}" />
-        <meta name="copyright" content="{{ AUTHOR }}" />
-        {% endif %}
+<!doctype html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        {% from '_includes/_defaults.html' import SITE_DESCRIPTION with context %}
-        {% if SITE_DESCRIPTION %}
-        <meta name="description" content="{% block head_description %}{{ SITE_DESCRIPTION|e }}{% endblock head_description %}" />
+    <title>{% block title %}{{ SITENAME|striptags|e }}{% endblock %}</title>
+    <meta name="description" content="{% block head_description %}{{ SITE_DESCRIPTION|e }}{% endblock %}">
+
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta name="copyright" content="{{ AUTHOR }}">
+
+    <meta property="og:site_name" content="{{ SITENAME|striptags|e }}">
+    <meta property="og:article:author" content="{{ AUTHOR }}">
+
+    {% if TWITTER_USERNAME %}
+        <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
+    {% endif %}
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary">
+
+    {% block meta_tags_in_head %}
+        {% include '_includes/smo_metadata.html' %}
+
+        <meta property="og:title" content="{{ self.title() }}">
+        <meta name="twitter:title" content="{{ self.title() }}">
+
+        <meta property="og:description" content="{{ self.head_description() }}">
+        <meta name="twitter:description" content="{{ self.head_description() }}">
+
+        <meta property="og:url" content="{{ SITEURL }}">
+
+        {% if FEATURED_IMAGE %}
+            <meta property="og:image" content="{{ FEATURED_IMAGE }}">
+            <meta name="twitter:image" content="{{ FEATURED_IMAGE }}">
         {% endif %}
-        {% block meta_tags_in_head %}
-        {% from '_includes/_defaults.html' import GOOGLE_PLUS_PROFILE_URL with context %}
-        {% if GOOGLE_PLUS_PROFILE_URL %}
-        <link rel="author" href={{GOOGLE_PLUS_PROFILE_URL}} />
-        {% endif %}
-        {% from '_includes/_defaults.html' import TWITTER_USERNAME with context %}
-        {%if TWITTER_USERNAME %}
-        <meta name="twitter:creator" content="@{{TWITTER_USERNAME}}">
-        {% endif %}
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary">
-        {% endblock meta_tags_in_head %}
-        <title>{% block title %}{{ SITENAME|striptags|e }}{% endblock title %}</title>
-        {% block head_links %}
-        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+    {% endblock %}
+
+
+    {% block head_links %}
+        <!-- use cdn, because many clients will have it already cached -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
         {% if 'assets' in PLUGINS %}
-        {% include '_includes/minify_css.html' with context %}
+            {% assets filters="cssmin", output="css/style.min.css",
+                    "css/pygments.css",
+                    "tipuesearch/tipuesearch.css",
+                    "css/elegant.css",
+                    "css/custom.css",
+                    "css/blog.css",
+                    "css/pure-min.css",
+                    "css/grids-responsive-min.css"
+            %}
+                <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ ASSET_URL }}">
+            {% endassets %}
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/elegant.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css" media="screen">
         {% endif %}
-        {% endblock head_links %}
-        {% include '_includes/favicon_links.html' %}
-        {% block feed_links %}
-        {% include '_includes/feeds.html' %}
-        {% endblock feed_links %}
-        {% include '_includes/analytics.html' %}
-    </head>
-    <body>
-        <div id="content-sans-footer">
-        <div class="navbar navbar-static-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="{{ SITEURL }}/"><span class=site-name>{{ SITENAME }}</span></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right top-menu">
-                            <li {% if page_name == 'index' %} class="active"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
-                            {% if DISPLAY_PAGES_ON_MENU %}
-                            {% for p in pages %}
-                            <li {% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-                            {% endfor %}
-                            {% endif %}
-                            <li {% if page_name == 'categories' %} class="active"{% endif %}><a href="{{ SITEURL }}/categories.html">Categories</a></li>
-                            <li {% if page_name == 'tags' %} class="active"{% endif %}><a href="{{ SITEURL }}/tags.html">Tags</a></li>
-                            <li {% if page_name == 'archives' %} class="active"{% endif %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
-                        </ul>
-                    </div>
-                </div>
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/custom.css">
+    {% endblock head_links %}
+
+    {% block feed_links %}
+    {% include '_includes/feeds.html' %}
+    {% endblock feed_links %}
+
+    {% include '_includes/analytics.html' %}
+</head>
+<body>
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title">{{ SITENAME }}</h1>
+            <h2 class="brand-tagline">{{ SITESUBTITLE }}</h2>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="{{ SITEURL }}/categories.html">Kategorien</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="{{ SITEURL }}/tags.html">Tags</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="{{ SITEURL }}/archives.html">Archiv</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="container">
+                {% include '_includes/social_links.html' %}
+            </div>
+
+            <div class="container">
+                <form class="pure-form" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                    <fieldset>
+                        <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input">
+                    </fieldset>
+                </form>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span1"></div>
-                <div class="span10">
-                    {% block content %}
-                    {% endblock content %}
-                </div>
-                <div class="span1"></div>
-            </div>
-        </div>
-        <div id="push"></div>
     </div>
-        {% include '_includes/footer.html' %}
-        {% block script %}
-        <script src="{{ SITEURL }}/jquery.min.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        {% block content %}
+        {% endblock content %}
+
+        <footer>
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul>
+                        {% for label, link in FOOTER %}
+                            <li class="pure-menu-item"><a href="{{ link }}" class="pure-menu-link">{{ label }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    {% block script %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
         <script>
             function validateForm(query)
             {
                 return (query.length > 0);
             }
         </script>
-        {% endblock script %}
-        {% include '_includes/stat_counter.html' %}
+    {% endblock script %}
     </body>
-    <!-- Theme: Elegant built for Pelican
-    License : http://oncrashreboot.com/pelican-elegant -->
 </html>
