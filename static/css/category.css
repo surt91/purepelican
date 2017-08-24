@@ -1,0 +1,29 @@
+.category a {
+    background: #555;
+    border-radius: 3px;
+    color: #eee;
+    margin: 2px;
+    padding: 3px 6px;
+    text-decoration: none;
+}
+
+.category-code a {
+    background: #5aba59;
+}
+
+.category-oneliner a {
+    background: #8156a7;
+}
+
+.category-tech a {
+    background: #4d85d1;
+}
+
+.category-misc a {
+    background: #777;
+}
+
+.category-count {
+    font-size: .8em;
+    vertical-align: super;
+}

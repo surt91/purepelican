@@ -14,41 +14,45 @@ Alle Tags.
 {% endblock feed_links %}
 
 {% block content %}
+    <h2 class="title"><a href="{{ SITEURL }}/tags.html">Alle Tags</a></h2>
 
-<div class="row-fluid">
-    <header class="page-header span10 offset2">
-    <h1><a href="{{ SITEURL }}/tags.html">All Tags</a></h1>
-    </header>
-</div>
-<div class="row-fluid">
-    <div class="span8 offset2">
-        <form class="form-search">
-            <input type="text" class="input-medium search-query filterinput" placeholder="Find a tag">
+    <div class="search-tag sep-line">
+        <form class="pure-form">
+            <input type="text" class="input-medium search-query filterinput" placeholder="Finde einen Tag">
         </form>
-        <ul class="list-of-tags">
-            {% for tag, articles in tags|sort %}
+        <span class="list-of-tags">
+            {% for tag, posts in tags|sort %}
+                <span class="tag">
+                    <a href="#{{ tag.slug }}-ref">
+                        {{ tag }}<span class="tag-count">{{ posts|count }}</span>
+                    </a>
+                </span>
+            {% endfor %}
+        </span>
+    </div>
+
+    <ul class="list">
+        {% for tag, posts in tags|sort %}
             <li>
-            {% set num = articles|count %}
-            <a href="#{{ tag.slug }}-ref">{{ tag }}<span>{{ num }}</span></a>
+                <div class="tag">
+                    <a href="#{{ tag.slug }}-ref">
+                        {{ tag }}<span class="tag-count">{{ posts|count }}</span>
+                    </a>
+                </div>
+                <div id="{{ tag.slug }}-ref">
+                    <ul class="list-posts">
+                        {% for article in posts|sort(reverse = true, attribute = 'date') %}
+                        <li>
+                            <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+                            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-
-<div class="row-fluid">
-    <div class="span8 offset2">
-        {% for tag, articles in tags|sort %}
-        <h2 id="{{ tag.slug }}-ref" class="tag-title">{{ tag }}</h2>
-        <ul class="articles-in-tag list-articles-category">
-            {% for article in articles|sort(reverse = true, attribute = 'date') %}
-            <li><time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></li>
-            {% endfor %}
-        </ul>
-
         {% endfor %}
-    </div>
-</div>
+    </ul>
+
 
 {% endblock content %}
 
@@ -73,7 +77,7 @@ Alle Tags.
                     $('.list-of-tags').find("a:not(:Contains(" + filter + "))").parent().hide();
                     $('.list-of-tags').find("a:Contains(" + filter + ")").parent().show();
                     } else {
-                    $('.list-of-tags').find("li").show();
+                    $('.list-of-tags').find("span").show();
                 }
                 return false;
             })
