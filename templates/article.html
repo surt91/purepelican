@@ -23,8 +23,7 @@
     {% import '_includes/post.html' as p with context %}
     {{ p.post(article) }}
 
-    <div class="pure-u-1 pure-u-md-1-4"></div>
-    <div class="post-navigation pure-u-1 pure-u-md-3-4">
+    <div class="post-navigation">
         {% include '_includes/related_posts.html' with context %}
         <nav class="pagination">
             {% if article.next_article %}
@@ -39,7 +38,7 @@
             <br>
         </nav>
     </div>
-{% endblock content %}
+{% endblock %}
 
 {% block script %}
     {{ super() }}

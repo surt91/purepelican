@@ -8,13 +8,14 @@
 {% endblock meta_tags_in_head %}
 
 {% block content %}
-<div class="posts">
-    {% import '_includes/post.html' as p with context %}
-    {% for article in articles_page.object_list %}
-        {{ p.post(article) }}
-    {% endfor %}
+    <div class="posts">
+        {% import '_includes/post.html' as p with context %}
+        {% for article in articles_page.object_list %}
+            {{ p.post(article) }}
+        {% endfor %}
+    </div>
 
-    {% if DEFAULT_PAGINATION %}
+    <div class="post-navigation">
         <nav class="pagination">
             {% if articles_page.has_previous() %}
                 <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&larr;&nbsp;Neuer</a>
@@ -26,8 +27,7 @@
                 <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Älter&nbsp;&rarr;</a>
             {% endif %}
             <br>
-            Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+            {{ articles_page.number }} / {{ articles_paginator.num_pages }}
         </nav>
-    {% endif %}
-</div>
-{% endblock content %}
+    </div>
+{% endblock %}

@@ -1,28 +1,36 @@
 {% macro post(article) %}
     <article class="post">
         <header class="post-header">
-            <h1><a href="{{ SITEURL }}/{{ article.url }}"> {{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></h1>
+            <h2 class="post-title">
+                <a href="{{ SITEURL }}/{{ article.url }}"> {{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
+            </h2>
 
-            <p class="post-meta">
+            <div class="post-meta">
                 <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
                 {% if article.category|trim|count > 0 %}
-                <a class="category-link" href="{{ SITEURL }}/categories.html#{{ article.category.slug }}-ref">{{ article.category }}</a>
+                <span class="category category-{{ article.category.slug }}">
+                    <a href="{{ SITEURL }}/categories.html#{{ article.category.slug }}-ref">{{ article.category }}</a>
+                </span>
                 {% endif %}
 
                 {% if article.tags and article.tags[0]|trim|count > 0 %}
-                <ul class="tags-in-article">
+                <span class="tags-in-article">
                     {% for tag in article.tags|sort %}
-                    <li><a href="{{ SITEURL }}/tags.html#{{ tag.slug }}-ref">{{ tag }}
-                        {% for aTag, tagged_articles in tags if aTag == tag %}
-                        <span>{{ tagged_articles|count }}</span>
-                        {% endfor %}</a></li>
+                        <span class="tag">
+                            <a href="{{ SITEURL }}/tags.html#{{ tag.slug }}-ref">
+                                {{- tag -}}
+                                {%- for aTag, tagged_articles in tags if aTag == tag -%}
+                                    <span class="tag-count">{{ tagged_articles|count }}</span>
+                                {%- endfor %}
+                            </a>
+                        </span>
                     {% endfor %}
-                </ul>
+                </span>
                 {% endif %}
-            </p>
+            </div>
         </header>
 
-        <div class="post-description">
+        <div class="post-content">
             {#
                 <div class="table-of-content">
                     <nav>
@@ -31,10 +39,9 @@
                     </nav>
                 </div>
             #}
-                {% import '_includes/translations.html' as translations with context %}
-                {{ translations.translations_for(article) }}
-                {{ article.content }}
-            </div>
+            {% import '_includes/translations.html' as translations with context %}
+            {{ translations.translations_for(article) }}
+            {{ article.content }}
         </div>
     </article>
 {% endmacro %}
