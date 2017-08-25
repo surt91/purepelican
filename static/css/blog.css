@@ -23,6 +23,10 @@ h3 {
     padding: 0;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 .header {
     text-align: center;
     top: auto;
