@@ -24,6 +24,11 @@
     padding-bottom: 5px;
 }
 
+.post-time {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
 .post-content {
     font: $font-post;
     color: $color-post;

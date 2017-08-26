@@ -1,7 +1,6 @@
 .tag {
     font: $font-tag;
     list-style: none;
-    overflow: hidden;
     display: inline-block;
 
     background: $color-bg-tag;
