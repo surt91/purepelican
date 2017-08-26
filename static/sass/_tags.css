@@ -1,0 +1,41 @@
+.tag {
+    font: $font-tag;
+    list-style: none;
+    overflow: hidden;
+
+    background: $color-bg-tag;
+    border-radius: 3px;
+    color: $color-tag;
+    margin: 0.2em;
+    padding: 3px 6px;
+}
+
+.tag a {
+    color: $color-tag;
+    text-decoration: none;
+}
+
+.category {
+    @extend .tag;
+    background: #555;
+}
+
+.category a {
+    color: $color-bg-main;
+}
+
+.category-code {
+    background: #5aba59;
+}
+
+.category-oneliner {
+    background: #8156a7;
+}
+
+.category-tech {
+    background: #4d85d1;
+}
+
+.category-misc {
+    background: #777;
+}

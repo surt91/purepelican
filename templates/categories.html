@@ -19,18 +19,18 @@ Kategorien von {{ SITENAME|striptags|e }}.
     <ul class="list">
         {% for category, posts in categories %}
             <li>
-                <div class="category category-{{ category.slug }}">
+                <div class="category category-{{ category.slug }}" id="{{ category.slug }}-ref">
                     <a href="#{{ category.slug }}-ref">
-                        {{ category }}<span class="category-count">{{ posts|count }}</span>
+                        {{ category }}<span class="count">{{ posts|count }}</span>
                     </a>
                 </div>
-                <div id="{{ category.slug }}-ref">
+                <div>
                     <ul class="list-posts">
                         {% for article in posts %}
-                        <li>
-                            <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-                            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</a>
-                        </li>
+                            <li>
+                                <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+                                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</a>
+                            </li>
                         {% endfor %}
                     </ul>
                 </div>

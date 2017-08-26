@@ -1,7 +1,7 @@
 i.sidebar-social-links {
     border-radius: 20%;
     border: solid transparent 1px;
-    color: rgb(176, 202, 219);
+    color: $color-brand;
     font-size: 1.3em;
     margin: 0;
     padding: 1px;
@@ -14,8 +14,8 @@ a.sidebar-social-links:hover {
     text-decoration: none;
 }
 i.sidebar-social-links:hover {
-    background-color: #A2A2A2;
-    color: #fff;
+    background-color: $color-brand;
+    color: $color-bg-sidebar;
 }
 
 i.fa-twitter:hover, i.fa-twitter-square:hover {

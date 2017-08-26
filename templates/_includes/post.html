@@ -19,9 +19,6 @@
                         <span class="tag">
                             <a href="{{ SITEURL }}/tags.html#{{ tag.slug }}-ref">
                                 {{- tag -}}
-                                {%- for aTag, tagged_articles in tags if aTag == tag -%}
-                                    <span class="tag-count">{{ tagged_articles|count }}</span>
-                                {%- endfor %}
                             </a>
                         </span>
                     {% endfor %}
