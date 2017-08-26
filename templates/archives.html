@@ -12,17 +12,21 @@ Vollständiges Archiv von {{ SITENAME|striptags|e }}.
     <h2 class="title"><a href="{{ SITEURL }}/archives.html">Archiv</a></h2>
 
     {% set years = {} %}
+    {% set count = {} %}
     {% for post in dates %}
-        {% if years.update({post.date.strftime('%Y'): None}) %}
+        {% set year = post.date.strftime('%Y') %}
+        {% if not year in years %}
+            {% if count.update({year: 0}) %}{% endif %}
         {% endif %}
+        {% if years.update({post.date.strftime('%Y'): None}) %}{% endif %}
     {% endfor %}
 
     <ul class="list">
         {% for year in years.keys() %}
             <li>
-                <div class="tag">
+                <div class="tag" id="{{ year }}-ref">
                     <a href="#{{ year }}-ref">
-                        {{ year }} {# <span class="year-count">{{ posts|count }}</span> #}
+                        {{ year }}<span class="count">{{ count[year] }}</span>
                     </a>
                 </div>
                 <ul class="list-posts">

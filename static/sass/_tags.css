@@ -2,17 +2,19 @@
     font: $font-tag;
     list-style: none;
     overflow: hidden;
+    display: inline-block;
 
     background: $color-bg-tag;
     border-radius: 3px;
     color: $color-tag;
-    margin: 0.2em;
-    padding: 3px 6px;
+
+    padding: 0.3em;
 }
 
 .tag a {
     color: $color-tag;
     text-decoration: none;
+    margin: 0.2em, 0.2em;
 }
 
 .category {

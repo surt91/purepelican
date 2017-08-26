@@ -1,5 +1,5 @@
-$font-brand: 3em 'Helvetica Neue', Helvetica, sans-serif;
-$font-title: 2.8em 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+$font-brand: 1.5em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+$font-title: 2.2em 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 $font-sectiontitle: bold 1.3em 'Helvetica Neue', Helvetica, sans-serif;
 $font-subtitle: 0.9em 'Helvetica Neue', Helvetica, sans-serif;
 $font-post: 1.2em Georgia, 'Cambria', serif;
@@ -32,6 +32,7 @@ $break-small: 48em;
 @import 'tags';     // colors and style for categrories and tags
 @import 'light';    // one light syntax highlighting (from atom)
 
+@import 'lists';
 @import 'post';
 
 * {
@@ -59,6 +60,10 @@ h3 {
     display: inline;
     width: 100%;
     max-width: 275px;
+}
+
+.search-query {
+    margin-bottom: 1em;
 }
 
 .center {
@@ -126,8 +131,14 @@ a:focus {
     margin: 0;
 }
 .brand-title {
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
+.brand-title a {
+    font: $font-brand;
+    color: $color-brand;
+    text-decoration: none;
+}
+
 .brand-tagline {
     font-weight: 300;
     color: $color-brand;
@@ -179,6 +190,11 @@ a:focus {
     }
 }
 
+.title {
+    font: $font-title;
+    color: $color-title;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -225,7 +241,7 @@ span.count {
 }
 
 .sep-line {
-    border-bottom: 2px solid #444;
+    border-bottom: $border-bottom;
 }
 
 .search-tag {
