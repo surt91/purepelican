@@ -17,9 +17,22 @@ ul.list-posts li time {
 
 ul.list-posts li {
     padding-bottom: 0.1em;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 ul.list {
     list-style: none outside none;
     margin: 0 0 0 5px;
+}
+
+@media (max-width: 48em) {
+    ul.list-posts {
+        padding-left: 1em;
+    }
+    ul.list {
+        padding-left: 0em;
+    }
 }

@@ -27,15 +27,24 @@ html {
     overflow-y: scroll;
 }
 
+#tipue_search_input {
+    display: inline;
+}
+
 .center {
     margin: auto;
     display: block;
 }
 
+.not-found-video {
+    max-width: 912px;
+    width: 100%
+}
+
 .header {
     text-align: center;
     top: auto;
-    margin: 3em auto;
+    margin: 2em auto 1em auto;
 }
 
 .title a {
