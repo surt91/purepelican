@@ -8,10 +8,27 @@
 {% endblock meta_tags_in_head %}
 
 {% block content %}
+    {% import '_includes/post.html' as p with context %}
+
+    {% if PINNED_POST %}
+        {# show the pinned post on the first page of the index #}
+        <h3 class="post-header">Vorgeschlagener Eintrag</h3>
+        <div class="post-pinned">
+            {% for article in articles %}
+                {% if articles_page.number == 1 and article.slug == PINNED_POST %}
+                    {{ p.post(article) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <h3 class="post-header">Neuste Einträge</h3>
     <div class="posts">
-        {% import '_includes/post.html' as p with context %}
         {% for article in articles_page.object_list %}
-            {{ p.post(article) }}
+            {# do not show the pinned post twice on one page #}
+            {% if articles_page.number != 1 or (PINNED_POST and article.slug != PINNED_POST) %}
+                {{ p.post(article) }}
+            {% endif %}
         {% endfor %}
     </div>
 

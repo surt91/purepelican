@@ -6,6 +6,7 @@
     font-size: 2em;
     color: #222;
     margin-bottom: 0.2em;
+    margin-top: 0;
 
     /*color: #8B0000;
     margin: 10px 10px 20px;
@@ -64,4 +65,22 @@
     text-transform: none;
     font-weight: 300;
     position:relative;
+}
+
+h3.post-header {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+@media (min-width: 48em) {
+    h3.post-header {
+        padding-top: 0.8em;
+        padding-left: 4px;
+        position: absolute;
+
+        transform: rotate(90deg);
+        transform-origin: left top 0;
+        float: left;
+    }
 }

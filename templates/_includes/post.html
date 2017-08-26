@@ -1,6 +1,6 @@
 {% macro post(article) %}
     <article class="post">
-        <header class="post-header">
+        <header>
             <h2 class="post-title">
                 <a href="{{ SITEURL }}/{{ article.url }}"> {{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
             </h2>
