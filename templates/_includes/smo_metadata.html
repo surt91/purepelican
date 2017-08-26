@@ -7,10 +7,10 @@
     <meta property="og:url" content="{{ article.url }}">
 
     {% if article.date %}
-        <meta property="og:article:published_time" content="{{ article.date.isoformat() }}" />
+        <meta property="og:article:published_time" content="{{ article.date.isoformat() }}">
     {% endif %}
     {% if article.locale_modified and article.modified %}
-        <meta property="" content="{{ article.modified.isoformat() }}" />
+        <meta property="" content="{{ article.modified.isoformat() }}">
     {% endif %}
 
     {% if article.featuredimage %}
