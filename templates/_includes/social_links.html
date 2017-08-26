@@ -1,5 +1,0 @@
-{% for entry in SOCIAL %}
-    <a href="{{ entry[1] }}" title="{{ entry[0] }}" class="sidebar-social-links" target="_blank">
-        <i class="fa fa-{% if entry|length > 2 %}{{ entry[2] }}{% else %}{{ entry[0]|lower }}{% endif %} sidebar-social-links"></i>
-    </a>
-{% endfor %}
