@@ -27,6 +27,11 @@ html {
     overflow-y: scroll;
 }
 
+.center {
+    margin: auto;
+    display: block;
+}
+
 .header {
     text-align: center;
     top: auto;
