@@ -1,7 +1,22 @@
-The license requires that you give credit to me, Talha Mansoor, as the author of the Elegant theme on every site that uses this theme. I have placed the attribution in the footer of every page. Do not remove it. If you need to remove or change the style of the attribution, please get in [touch with me](http://oncrashreboot.com/#about-me) first. 
+MIT License
 
-Along with this attribution clause, Elegant theme is licensed under The MIT License.
+Copyright (c) 2014 Talha Mansoor
+Copyright (c) 2017 Hendrik Schawe
 
-If you use my theme, I would love to hear from you. [Get in touch](http://oncrashreboot.com/#about-me) and let me know about it. I may link to your site too.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Please visit License section of [Elegant - a theme for Pelican](http://oncrashreboot.com/pelican-elegant) at my blog for updated licensing details.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
