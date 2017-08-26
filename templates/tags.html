@@ -24,7 +24,7 @@ Alle Tags.
             {% for tag, posts in tags|sort %}
                 <span class="tag">
                     <a href="#{{ tag.slug }}-ref">
-                        {{ tag }}<span class="count">{{ posts|count }}</span>
+                        {{ tag }}{# <span class="count">{{ posts|count }}</span> #}
                     </a>
                 </span>
             {% endfor %}
@@ -36,7 +36,7 @@ Alle Tags.
             <li>
                 <div class="tag" id="{{ tag.slug }}-ref">
                     <a href="#{{ tag.slug }}-ref">
-                        {{ tag }}<span class="count">{{ posts|count }}</span>
+                        {{ tag }}{# <span class="count">{{ posts|count }}</span> #}
                     </a>
                 </div>
                 <div>
