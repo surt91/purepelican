@@ -20,3 +20,5 @@ Icon
 Session.vim
 .netrwhist
 *~
+
+__pycache__
