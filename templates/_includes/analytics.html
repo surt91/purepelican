@@ -1,5 +1,0 @@
-{% if GOOGLE_ANALYTICS %}
-    {% assets filters="rjsmin", output="js/ga.js", "js/google_analytics.js" %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-    {% endassets %}
-{% endif %}
