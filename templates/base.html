@@ -113,6 +113,9 @@
         {% endblock content %}
     </div>
 
+    <div id="last-update">
+        <time datetime="{{ NOW.isoformat() }}">{{ NOW.strftime("%H:%M:%S %d.%m.%Y") }}</time>
+    </div>
 </div>
 
 {% block script %}
