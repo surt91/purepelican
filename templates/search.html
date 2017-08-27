@@ -10,36 +10,13 @@ Suchergebnisse.
 
 {% block script %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    {% if 'assets' in PLUGINS %}
-        {% assets filters="rjsmin", output="tipuesearch/tipuesearch.packed.min.js",
-                "tipuesearch/tipuesearch_set.js",
-                "tipuesearch/tipuesearch.min.js"
-        %}
-            <script type="text/javascript" src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-        {% endassets %}
-    {% else %}
-        <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
-        <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
-    {% endif %}
-<script>
-$(document).ready(function() {
-     $('#tipue_search_input').tipuesearch({
-         {% if 'tipue_search' in PLUGINS %}
-             'mode' : 'json',
-         {% else %}
-             'mode': 'live',
-         {% endif %}
-         'show': 10,
-         'newWindow': false,
-         {# I cannot place following statements in the conditionals above because then Tipue Search fails to work. Possibly a bug in Tipue Search. #}
-         {% if 'tipue_search' in PLUGINS %}
-             'contentLocation': 'tipuesearch_content.json'
-         {% else %}
-             'liveDescription': '.article-content'
-         {% endif %}
-     });
-});
-</script>
+    {% assets filters="rjsmin", output="tipuesearch/tipuesearch.packed.min.js",
+            "tipuesearch/tipuesearch_set.js",
+            "tipuesearch/tipuesearch.min.js",
+            "js/tipue.js"
+    %}
+        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+    {% endassets %}
 {% endblock script %}
 
 {% block content %}
