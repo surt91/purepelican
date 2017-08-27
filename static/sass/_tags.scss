@@ -16,6 +16,9 @@
     text-decoration: none;
     margin: 0.2em 0.2em;
 }
+.tag a:hover {
+    text-decoration: none;
+}
 
 .category {
     @extend .tag;
