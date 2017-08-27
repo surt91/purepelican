@@ -56,9 +56,5 @@ Alle Tags.
 
 {% block script %}
 {{ super() }}
-    {% assets filters="rjsmin", output="js/tag_search.min.js",
-            "js/tag_search.js"
-    %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-    {% endassets %}
+    <script src="{{ SITEURL }}/theme/js/tag_search.js"></script>
 {% endblock script %}
