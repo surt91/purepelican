@@ -197,6 +197,11 @@ a:focus {
     color: $color-title;
 }
 
+.MathJax_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 img {
     display: block;
     margin: auto;
