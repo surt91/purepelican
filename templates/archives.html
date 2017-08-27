@@ -33,7 +33,7 @@ Vollständiges Archiv von {{ SITENAME|striptags|e }}.
                     {% for post in dates %}
                         {% if post.date.strftime('%Y') == year %}
                             <li>
-                                <time pubdate="pubdate" datetime="{{ post.date.isoformat() }}">{{ post.locale_date }}</time>
+                                <time datetime="{{ post.date.isoformat() }}">{{ post.locale_date }}</time>
                                 <a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }} {%if post.subtitle %} <small> {{ post.subtitle }} </small> {% endif %}</a>
                             </li>
                         {% endif %}

@@ -43,7 +43,7 @@ Alle Tags.
                     <ul class="list-posts">
                         {% for article in posts|sort(reverse = true, attribute = 'date') %}
                             <li>
-                                <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+                                <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
                                 <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</a>
                             </li>
                         {% endfor %}
