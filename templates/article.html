@@ -26,13 +26,13 @@
     <div class="post-navigation">
         <nav class="pagination">
             {% if article.next_article %}
-                <a href="{{ SITEURL }}/{{ article.next_article.url }}">&larr;&nbsp;Neuer</a>
+                <a href="/{{ article.next_article.url }}">&larr;&nbsp;Neuer</a>
             {% endif %}
             {% if article.prev_article and article.next_article %}
                 <span class="separatordot">&middot;</span>
             {% endif %}
             {% if article.prev_article %}
-                <a href="{{ SITEURL }}/{{ article.prev_article.url }}">Älter&nbsp;&rarr;</a>
+                <a href="/{{ article.prev_article.url }}">Älter&nbsp;&rarr;</a>
             {% endif %}
             <br>
         </nav>

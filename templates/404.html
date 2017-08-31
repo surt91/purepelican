@@ -13,7 +13,7 @@ Diese Seite existiert nicht auf {{ SITENAME|striptags|e }}.
 
     Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?
     <div class="input-append">
-        <form class="pure-form" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+        <form class="pure-form" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">
             <fieldset>
                 <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input_404">
             </fieldset>
@@ -21,9 +21,9 @@ Diese Seite existiert nicht auf {{ SITENAME|striptags|e }}.
     </div>
 
     <div class="center">
-        <video poster="{{ SITEURL }}/theme/img/404.png" loop autoplay class="center not-found-video">
-            <source src="{{ SITEURL }}/theme/vid/404.webm" type="video/webm; codecs=vp9,vorbis">
-            <source src="{{ SITEURL }}/theme/vid/404.mp4" type="video/mp4">
+        <video poster="/theme/img/404.png" loop autoplay class="center not-found-video">
+            <source src="/theme/vid/404.webm" type="video/webm; codecs=vp9,vorbis">
+            <source src="/theme/vid/404.mp4" type="video/mp4">
         </video>
     </div>
 {% endblock content %}

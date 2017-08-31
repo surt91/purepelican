@@ -9,7 +9,7 @@ Vollständiges Archiv von {{ SITENAME|striptags|e }}.
 {%- endblock head_description %}
 
 {% block content %}
-    <h2 class="title"><a href="{{ SITEURL }}/archives.html">Archiv</a></h2>
+    <h2 class="title"><a href="/archives.html">Archiv</a></h2>
 
     {% set years = {} %}
     {% set count = {} %}
@@ -34,7 +34,7 @@ Vollständiges Archiv von {{ SITENAME|striptags|e }}.
                         {% if post.date.strftime('%Y') == year %}
                             <li>
                                 <time datetime="{{ post.date.isoformat() }}">{{ post.locale_date }}</time>
-                                <a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }} {%if post.subtitle %} <small> {{ post.subtitle }} </small> {% endif %}</a>
+                                <a href="/{{ post.url }}">{{ post.title }} {%if post.subtitle %} <small> {{ post.subtitle }} </small> {% endif %}</a>
                             </li>
                         {% endif %}
                     {% endfor %}
