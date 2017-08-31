@@ -62,12 +62,13 @@ http://www.tipue.com/search
 }
 .tipue_search_content_title
 {
-    color: #666;
+    /*color: #666;*/
+    font-size: 2em;
     margin-top: 21px;
 }
 .tipue_search_content_title a
 {
-    color: #666;
+    /*color: #666;*/
     text-decoration: none;
 }
 .tipue_search_content_title a:hover
