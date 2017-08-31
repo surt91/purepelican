@@ -82,7 +82,7 @@
 
             <div class="container">
                 {% for entry in SOCIAL %}
-                    <a href="{{ entry[1] }}" title="{{ entry[0] }}" class="sidebar-social-links" target="_blank">
+                    <a href="{{ entry[1] }}" title="{{ entry[0] }}" class="sidebar-social-links" target="_blank" rel="noopener">
                         <i class="fa fa-{% if entry|length > 2 %}{{ entry[2] }}{% else %}{{ entry[0]|lower }}{% endif %} sidebar-social-links"></i>
                     </a>
                 {% endfor %}
@@ -91,7 +91,7 @@
             <div class="container">
                 <form class="pure-form" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
                     <fieldset>
-                        <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input">
+                        <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input" aria-label="Suche">
                     </fieldset>
                 </form>
             </div>
