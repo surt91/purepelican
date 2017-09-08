@@ -22,7 +22,7 @@ Vollständiges Archiv von {{ SITENAME|striptags|e }}.
     {% endfor %}
 
     <ul class="list">
-        {% for year in years.keys() %}
+        {% for year in years.keys()|sort(reverse=True) %}
             <li>
                 <div class="tag" id="{{ year }}-ref">
                     <a href="#{{ year }}-ref">
