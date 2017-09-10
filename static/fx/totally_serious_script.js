@@ -15,12 +15,22 @@ document.addEventListener('keydown', function(e) {
 function totally_serious_function() {
     console.log("activate all powerups");
 
-    // https://github.com/Okazari/Rythm.js
+    var img = document.createElement("img");
+    img.src = "/theme/fx/happy_cthulhu.png";
+    img.className += "cthulhu";
+    img.setAttribute("style", "position: fixed; width: 526px; height: 442px; top: 50%; left: 50%; margin-top: -221px; margin-left: -263px;");
+
+    var credits = document.createElement("div");
+    credits.setAttribute("style", "position: fixed; bottom: 10px; right: 10px; background-color: #eee; box-shadow: 7px 7px 5px grey; border-radius: 5px; padding: 3px 10px; font-size: 80%;")
+    credits.innerHTML = '<p>"Happy Cthulhu" by <a href="https://kandipatterns.com/patterns/characters/happy-cthulhu-11927">GingerCandE</a></p>'
+    credits.innerHTML += '<p>"SuperBluesBros Banana Blitz" by <a href="http://freemusicarchive.org/music/RoccoW/~/SuperBluesBros_Banana_Blitz">RoccoW</a> (CC-BY)</p>'
+    credits.innerHTML += '<p>"rythm.js" by <a href="https://github.com/Okazari/Rythm.js">Okazari</a></p>'
+
+    document.body.appendChild(img);
+    document.body.appendChild(credits);
+
     var rythm = new Rythm();
 
-    // SuperBluesBros Banana Blitz by RoccoW is licensed under CC-BY
-    // http://freemusicarchive.org/music/RoccoW/~/SuperBluesBros_Banana_Blitz
-    console.log("The song is courtesy of RoccoW. (CC-BY)")
     rythm.setMusic("/theme/fx/RoccoW_SuperBluesBros_Banana_Blitz.mp3");
 
     rythm.addRythm('post-title', 'shake', 500, 100);
@@ -30,6 +40,8 @@ function totally_serious_function() {
     rythm.addRythm('icon', 'twist', 500, 100, {min: -90, max: 90});
     rythm.addRythm('post-navigation', 'jump', 500, 100);
 
+    rythm.addRythm('cthulhu', 'jump', 500, 100, {min: -30, max: 120});
+
     rythm.addRythm('brand-title', 'pulse', 0, 10);
     rythm.addRythm('pure-button', 'pulse', 10, 100);
     rythm.addRythm('sidebar-social-links', 'pulse', 100, 500);
@@ -38,8 +50,8 @@ function totally_serious_function() {
     rythm.addRythm('post-content', 'vanish', 500, 100);
 
     rythm.addRythm('sidebar', 'color', 0, 10, {
-      from: [100,0,255],
-      to:[200,0,255]
+      from: [10,50,0],
+      to:[20,95,30]
     })
     rythm.addRythm('tag', 'color', 100, 500, {
       from: [100,100,255],
@@ -47,5 +59,5 @@ function totally_serious_function() {
     })
 
     rythm.start();
-    setTimeout(rythm.stop, 60000);
+    setTimeout(function() {window.location.reload();}, 60000);
 }
