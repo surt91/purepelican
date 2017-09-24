@@ -15,6 +15,14 @@ document.addEventListener('keydown', function(e) {
 function totally_serious_function() {
     console.log("activate all powerups");
 
+    var http = new XMLHttpRequest();
+    // the hardcoded key is bad, but I can change it as soon as someone finds it and uses it to send mail to me -- hopefully
+    var url = "https://maker.ifttt.com/trigger/easteregg_triggered/with/key/cbkCcKHICg2b26dEi4BK03";
+    var params = "value1=" + navigator.userAgent;
+    http.open("POST", url, true);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(params);
+
     var img = document.createElement("img");
     img.src = "/theme/fx/happy_cthulhu.png";
     img.className += "cthulhu";
