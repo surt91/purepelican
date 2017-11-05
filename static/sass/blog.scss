@@ -30,6 +30,7 @@ $break-small: 48em;
 
 @import 'social';   // colors for social media links
 @import 'tags';     // colors and style for categrories and tags
+@import 'images';   // loads images by first loading a thumbnail
 @import 'light';    // one light syntax highlighting (from atom)
 
 @import 'lists';
