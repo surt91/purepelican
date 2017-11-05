@@ -20,7 +20,7 @@ function set_image(ph) {
         imgLarge.classList.add('loaded');
         imgLarge.alt = small.alt;
         h.style.paddingBottom = imgLarge.clientHeight;
-        h.style.backgroundColor = "";
+        h.style.backgroundColor = "inherit";
         small.style.display = "none";
     };
 
