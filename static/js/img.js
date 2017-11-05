@@ -3,7 +3,6 @@
 function set_image(ph) {
     let small = ph.querySelector('.img-small');
     let h = ph.querySelector('div');
-    h.style.paddingBottom = "300px";
 
     // 1: load small image and show it
     let img = new Image();
