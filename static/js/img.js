@@ -18,7 +18,7 @@ function set_image(ph) {
     imgLarge.src = ph.dataset.large;
     imgLarge.onload = function () {
         imgLarge.classList.add('loaded');
-        image.alt = small.alt;
+        imgLarge.alt = small.alt;
         h.style.paddingBottom = imgLarge.clientHeight;
         h.style.backgroundColor = "";
         small.style.display = "none";
