@@ -2,25 +2,22 @@
 
 function set_image(ph) {
     let small = ph.querySelector('.img-small');
-    let h = ph.querySelector('div');
 
     // 1: load small image and show it
     let img = new Image();
     img.src = small.src;
     img.onload = function () {
         small.classList.add('loaded');
-        h.style.paddingBottom = small.clientHeight;
     };
 
     // 2: load large image
     let imgLarge = new Image();
+    imgLarge.style.position = "absolute";
+    imgLarge.alt = small.alt;
     imgLarge.src = ph.dataset.large;
     imgLarge.onload = function () {
         imgLarge.classList.add('loaded');
-        imgLarge.alt = small.alt;
-        h.style.paddingBottom = imgLarge.clientHeight;
-        h.style.backgroundColor = "inherit";
-        small.style.display = "none";
+        small.style.opacity = 0;
     };
 
     ph.appendChild(imgLarge);
