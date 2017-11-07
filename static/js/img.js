@@ -18,6 +18,7 @@ function set_image(ph) {
     imgLarge.onload = function () {
         imgLarge.classList.add('loaded');
         small.style.opacity = 0;
+        ph.style.backgroundColor = "";
     };
 
     ph.appendChild(imgLarge);
