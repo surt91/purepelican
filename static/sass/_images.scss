@@ -6,7 +6,8 @@ img {
     vertical-align: middle;
 }
 
-img.icon {
+.icon > img
+.icon {
     float: right;
     height: 200px;
     border: 0px;
