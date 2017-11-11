@@ -1,5 +1,5 @@
 $font-brand: 1.5em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-$font-title: 2.2em 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+$font-title: bold 2.2em 'Helvetica Neue', Helvetica, sans-serif;
 $font-sectiontitle: bold 1.3em 'Helvetica Neue', Helvetica, sans-serif;
 $font-subtitle: 0.9em 'Helvetica Neue', Helvetica, sans-serif;
 $font-post: 1.2em Georgia, 'Cambria', serif;
@@ -29,7 +29,7 @@ $border: 1px solid rgba(0, 0, 0, 0.15);
 $break-small: 48em;
 
 @import 'social';   // colors for social media links
-@import 'tags';     // colors and style for categrories and tags
+@import 'tags';     // colors and style for categories and tags
 @import 'images';   // loads images by first loading a thumbnail
 @import 'light';    // one light syntax highlighting (from atom)
 
