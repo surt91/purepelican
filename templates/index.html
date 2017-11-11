@@ -11,7 +11,7 @@
     {% import '_includes/post.html' as p with context %}
 
     {# show the pinned post on the first page of the index #}
-    {% if PINNED_POST and articles_page.number == 1 %}
+    {% if PINNED_POST and articles_page.number == 1 and page_name == "index" %}
         <h3 class="post-header">Vorgeschlagener Eintrag</h3>
         <div class="post-pinned">
             {% for article in articles %}
@@ -29,7 +29,7 @@
     <div class="posts">
         {% for article in articles_page.object_list %}
             {# do not show the pinned post twice on one page #}
-            {% if articles_page.number != 1 or (PINNED_POST and article.slug != PINNED_POST) %}
+            {% if articles_page.number != 1 or (PINNED_POST and article.slug != PINNED_POST) or page_name != "index" %}
                 {{ p.post(article) }}
             {% endif %}
         {% endfor %}

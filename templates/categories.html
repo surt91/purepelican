@@ -20,7 +20,7 @@ Kategorien von {{ SITENAME|striptags|e }}.
         {% for category, posts in categories %}
             <li>
                 <div class="category category-{{ category.slug }}" id="{{ category.slug }}-ref">
-                    <a href="#{{ category.slug }}-ref">
+                    <a href="/category/{{ category.slug }}.html">
                         {{ category }}{# <span class="count">{{ posts|count }}</span> #}
                     </a>
                 </div>
