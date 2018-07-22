@@ -5,13 +5,13 @@
 {% endblock title %}
 
 {% block head_description %}
-Diese Seite existiert nicht auf {{ SITENAME|striptags|e }}.
+{% trans %}Diese Seite existiert nicht auf{% endtrans %} {{ SITENAME|striptags|e }}.
 {% endblock head_description %}
 
 {% block content %}
-    <h2 class="title">Seite nicht gefunden</h2>
+    <h2 class="title">{% trans %}Seite nicht gefunden{% endtrans %}</h2>
 
-    Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?
+    {% trans %}Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?{% endtrans %}
     <div class="input-append">
         <form class="pure-form" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">
             <fieldset>

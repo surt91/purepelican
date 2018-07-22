@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Tags · {{ super() }}
+{% trans %}Tags{% endtrans %} · {{ super() }}
 {%- endblock title %}
 
 {% block head_description %}
-Alle Tags.
+{% trans %}Alle Tags{% endtrans %}.
 {%- endblock head_description %}
 
 {% block feed_links %}
@@ -14,11 +14,11 @@ Alle Tags.
 {% endblock feed_links %}
 
 {% block content %}
-    <h2 class="title"><a href="/tags.html">Alle Tags</a></h2>
+    <h2 class="title"><a href="/tags.html">{% trans %}Alle Tags{% endtrans %}</a></h2>
 
     <div class="search-tag sep-line">
         <form class="pure-form">
-            <input type="text" class="input-medium search-query filterinput" placeholder="Finde einen Tag">
+            <input type="text" class="input-medium search-query filterinput" placeholder="{% trans %}Finde einen Tag{% endtrans %}">
         </form>
         <span class="list-of-tags">
             {% for tag, posts in tags|sort %}

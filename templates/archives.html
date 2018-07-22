@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Archiv · {{ super() }}
+{% trans %}Archiv{% endtrans %} · {{ super() }}
 {%- endblock title %}
 
 {% block head_description %}
-Vollständiges Archiv von {{ SITENAME|striptags|e }}.
+{% trans %}Vollständiges Archiv von{% endtrans %} {{ SITENAME|striptags|e }}.
 {%- endblock head_description %}
 
 {% block content %}
-    <h2 class="title"><a href="/archives.html">Archiv</a></h2>
+    <h2 class="title"><a href="/archives.html">{% trans %}Archiv{% endtrans %}</a></h2>
 
     {% set years = {} %}
     {% set count = {} %}

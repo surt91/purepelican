@@ -1,0 +1,79 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-07-22 20:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: templates/404.html:8
+msgid "Diese Seite existiert nicht auf"
+msgstr ""
+
+#: templates/404.html:12
+msgid "Seite nicht gefunden"
+msgstr ""
+
+#: templates/404.html:14
+msgid "Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?"
+msgstr ""
+
+#: templates/archives.html:4 templates/archives.html:12
+msgid "Archiv"
+msgstr ""
+
+#: templates/archives.html:8
+msgid "Vollständiges Archiv von"
+msgstr ""
+
+#: templates/article.html:29 templates/index.html:41
+msgid "Neuer"
+msgstr ""
+
+#: templates/article.html:35 templates/index.html:47
+msgid "Älter"
+msgstr ""
+
+#: templates/categories.html:4
+msgid "Kategorien"
+msgstr ""
+
+#: templates/categories.html:8
+msgid "Kategorien von"
+msgstr ""
+
+#: templates/categories.html:17
+msgid "Alle Kategorien"
+msgstr ""
+
+#: templates/index.html:15
+msgid "Vorgeschlagener Eintrag"
+msgstr ""
+
+#: templates/index.html:26
+msgid "Neuste Einträge"
+msgstr ""
+
+#: templates/tags.html:4
+msgid "Tags"
+msgstr ""
+
+#: templates/tags.html:8 templates/tags.html:17
+msgid "Alle Tags"
+msgstr ""
+
+#: templates/tags.html:21
+msgid "Finde einen Tag"
+msgstr ""
+
