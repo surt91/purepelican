@@ -7,6 +7,10 @@
 
             <div class="post-meta">
                 <time class="post-time" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+
+                {% import '_includes/translations.html' as translations with context %}
+                {{ translations.translations_for(article) }}
+
                 {% if article.category|trim|count > 0 %}
                 <span class="category category-{{ article.category.slug }}">
                     <a href="/categories.html#{{ article.category.slug }}-ref">{{ article.category }}</a>

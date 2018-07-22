@@ -52,3 +52,12 @@
 .category-misc {
     background: #777;
 }
+
+.language {
+    @extend .tag;
+    background: #555;
+}
+
+.language a {
+    color: $color-bg-main;
+}
