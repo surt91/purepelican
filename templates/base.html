@@ -51,11 +51,11 @@
         {% assets filters="cssmin", output="css/main.css",
             "css/pure-min.css",
             "css/grids-responsive-min.css",
-            "sass",
             "tipuesearch/tipuesearch.css"
         %}
             <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}">
         {% endassets %}
+        <link rel="stylesheet" type="text/css" href="/theme/css/blog.css">
     {% endblock head_links %}
 
     {% block feed_links %}
