@@ -14,7 +14,7 @@
 {% endblock feed_links %}
 
 {% block content %}
-    <h2 class="title"><a href="/tags.html">{% trans %}Alle Tags{% endtrans %}</a></h2>
+    <h2 class="title"><a href="{{ SITEURL }}/tags.html">{% trans %}Alle Tags{% endtrans %}</a></h2>
 
     <div class="search-tag sep-line">
         <form class="pure-form">
@@ -44,7 +44,7 @@
                         {% for article in posts|sort(reverse = true, attribute = 'date') %}
                             <li>
                                 <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-                                <a href="/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</a>
+                                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</a>
                             </li>
                         {% endfor %}
                     </ul>

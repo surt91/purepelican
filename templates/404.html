@@ -13,7 +13,7 @@
 
     {% trans %}Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?{% endtrans %}
     <div class="input-append">
-        <form class="pure-form" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+        <form class="pure-form" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
             <fieldset>
                 <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input_404">
             </fieldset>

@@ -38,13 +38,13 @@
     <div class="post-navigation">
         <nav class="pagination">
             {% if articles_page.has_previous() %}
-                <a href="/{{ articles_previous_page.url }}">&larr;&nbsp;{% trans %}Neuer{% endtrans %}</a>
+                <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&larr;&nbsp;{% trans %}Neuer{% endtrans %}</a>
             {% endif %}
             {% if articles_page.has_previous() and articles_page.has_next() %}
                 <span class="separatordot">&middot;</span>
             {% endif %}
             {% if articles_page.has_next() %}
-                <a href="/{{ articles_next_page.url }}">{% trans %}Älter{% endtrans %}&nbsp;&rarr;</a>
+                <a href="{{ SITEURL }}/{{ articles_next_page.url }}">{% trans %}Älter{% endtrans %}&nbsp;&rarr;</a>
             {% endif %}
             <br>
             {{ articles_page.number }} / {{ articles_paginator.num_pages }}

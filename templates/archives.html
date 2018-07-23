@@ -9,7 +9,7 @@
 {%- endblock head_description %}
 
 {% block content %}
-    <h2 class="title"><a href="/archives.html">{% trans %}Archiv{% endtrans %}</a></h2>
+    <h2 class="title"><a href="{{ SITEURL }}/archives.html">{% trans %}Archiv{% endtrans %}</a></h2>
 
     {% set years = {} %}
     {% set count = {} %}
@@ -34,7 +34,7 @@
                         {% if post.date.strftime('%Y') == year %}
                             <li>
                                 <time datetime="{{ post.date.isoformat() }}">{{ post.locale_date }}</time>
-                                <a href="/{{ post.url }}">{{ post.title }} {%if post.subtitle %} <small> {{ post.subtitle }} </small> {% endif %}</a>
+                                <a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }} {%if post.subtitle %} <small> {{ post.subtitle }} </small> {% endif %}</a>
                             </li>
                         {% endif %}
                     {% endfor %}
