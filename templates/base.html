@@ -85,7 +85,7 @@
                     {% if extra_siteurls %}
                         {% for lang, url in extra_siteurls.items() %}
                         <li class="nav-item">
-                            <a class="pure-button{% if lang == DEFAULT_LANG %} active{% endif %}" href="{{ url }}/"><i class="fa fa-globe"> {{ lang }}</a>
+                            <a class="pure-button{% if lang == DEFAULT_LANG %} active{% endif %}" href="{{ url }}/"><i class="fa fa-globe"></i> {{ lang }}</a>
                         </li>
                         {% endfor %}
                     {% endif %}
