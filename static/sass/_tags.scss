@@ -61,3 +61,13 @@
 .language a {
     color: $color-bg-main;
 }
+
+.doi {
+    @extend .tag;
+    background: #fcb425;
+    margin-left: 0.5em;
+}
+
+.doi a {
+    color: $color-bg-main;
+}

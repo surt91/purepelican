@@ -28,6 +28,10 @@
                     {% endfor %}
                 </span>
                 {% endif %}
+
+                {% if article.doi  %}
+                <span class="doi"><a href="https://dx.doi.org/{{ article.doi }}">doi:{{ article.doi }}</a></span>
+                {% endif %}
             </div>
         </header>
 
