@@ -5,16 +5,16 @@
                 <a href="/{{ article.url }}"> {{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
             </h2>
 
-            {% if article.doi  %}
             <div class="post-meta">
-                <span class="doi-details"><a href="https://dx.doi.org/{{ article.doi }}">
-                    {{ article.doi_authors }},
-                    {{ article.doi_journal }} <b>{{ article.doi_volume }}</b>, {{ article.doi_number }} ({{ article.doi_year }})
-                </a></span>
-            </div>
-            {% endif %}
+                {% if article.doi  %}
+                <div>
+                    <span class="doi-details">
+                        {{ article.doi_authors }},
+                        {{ article.doi_journal }} <b>{{ article.doi_volume }}</b>, {{ article.doi_number }} ({{ article.doi_year }})
+                    </span>
+                </div>
+                {% endif %}
 
-            <div class="post-meta">
                 <time class="post-time" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
 
                 {% import '_includes/translations.html' as translations with context %}
