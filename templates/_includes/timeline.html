@@ -5,14 +5,24 @@
                 <div class="timeline-title">
                     {{ event.name }}, {{ event.place }}
                 </div>
-                {% if event.presentation %}
-                    <span class="timeline-presentation">
-                        {{ event.presentation }},
-                    </span>
-                    {% if event.pdf %}
-                        <a class="timeline-download" href="/pdf/{{ event.pdf }}">Download <i class="fa fa-download"></i></a>,
-                    {% endif %}
-                {% endif %}
+                {% for presentation in event.presentations %}
+                    <div class="timeline-presentation-item">
+                        {% if presentation.type == "thesis" %}
+                            <i class="fa fa-book"></i>
+                        {% elif presentation.type == "talk" %}
+                            <i class="fa fa-tv"></i>
+                        {% elif presentation.type == "poster" %}
+                            <i class="fa fa-file"></i>
+                        {% endif %}
+                        <span class="timeline-presentation">{{ presentation.title }},</span>
+                        {% if presentation.pdf %}
+                            <a class="timeline-download" href="/pdf/{{ presentation.pdf }}">Download <i class="fa fa-download"></i></a>
+                        {% endif %}
+                        {% if presentation.link %}
+                            <a class="timeline-download" href="{{ presentation.link }}">View</a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
             </div>
         {% endfor %}
     </div>

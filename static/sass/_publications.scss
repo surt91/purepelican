@@ -42,9 +42,11 @@ ol.publication > li:before {
     margin-top: 0;
 }
 
-.timeline-presentation {
+.timeline-presentation-item {
     font: $font-post;
+    font-size: 1em;
     color: $color-post;
+    padding-left: 1em;
     margin-bottom: 0.2em;
     margin-top: 0;
 }
