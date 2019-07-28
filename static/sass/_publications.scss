@@ -1,0 +1,62 @@
+.publications {
+    margin-bottom: 1.2em;
+}
+
+ol.publication {
+    list-style: decimal-leading-zero;
+}
+
+ol.publication > li {
+    margin-bottom: 1.8em;
+}
+
+ol.publication > li:before {
+    font: $font-sectiontitle;
+    color: $color-title;
+}
+
+.pub-title {
+    font: $font-sectiontitle;
+    color: $color-title;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+
+.pub-authors,
+.pub-journalref {
+    font: $font-post;
+    color: $color-post;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+
+.pub-volume {
+    font-weight: bold;
+}
+
+.pub-doi,
+.pub-arxiv {
+    font: $font-post;
+    color: $color-subtitle;
+    border-bottom: 1px dotted $color-subtitle;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+
+a.pub-download:hover,
+a.pub-download:focus {
+    border-bottom:: 1px solid $color-subtitle;
+}
+
+.pub-download {
+    color: $color-post;
+    font-weight: bold;
+    border-bottom: 1px dotted $color-post;
+    padding-bottom: 0.5px;
+    font: $font-code;
+}
+
+a.pub-download:hover,
+a.pub-download:focus {
+    border-bottom:: 1px solid $color-post;
+}

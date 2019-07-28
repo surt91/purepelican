@@ -1,50 +1,45 @@
 {% macro publications(publications) %}
     <div class="publications">
-        <ol>
-            <div class="publication">
-                {% for publication in publications %}
-                    <ul>
-                        <h3 class="pub-title">
-                            {{ publication.title }}
-                        </h3>
-                        <div class="pub-authors">{{ publication.authors }},</div>
-                        <div class="pub-journalref">
-                            <span class="pub-journal">{{ publication.journal }}</span>
-                            <span class="pub-volume">{{ publication.volume }},</span>
-                            <span class="pub-number">{{ publication.number }}</span>
-                            (<span class="pub-year">{{ publication.year }}</span>)
-                        </div>
+        <ol class="publication">
+            {% for publication in publications %}
+                <li>
+                    <h3 class="pub-title">
+                        {{ publication.title }}
+                    </h3>
+                    <div class="pub-authors">{{ publication.authors }}</div>
+                    <div class="pub-journalref">
+                        <span class="pub-journal">{{ publication.journal }}</span>
+                        <span class="pub-volume">{{ publication.volume }},</span>
+                        <span class="pub-number">{{ publication.number }}</span>
+                        (<span class="pub-year">{{ publication.year }}</span>)
+                    </div>
 
-                        <div class="pub-links">
-                            <span class="pub-download"><a href="/pdf/{{ publication.pdf }}">Download</a></span>
-                            <span class="pub-doi"><a href="https://dx.doi.org/{{ publication.doi }}">doi:{{ publication.doi }}</a></span>
-                            {% if publication.arxiv %}
-                                <span class="pub-arxiv"><a href="https://arxiv.org/abs/{{ publication.arxiv }}">{{ publication.arxiv_long }}</a></span>
-                            {% endif %}
-                        </div>
-                    </ul>
-                {% endfor %}
-            </div>
+                    <div class="pub-links">
+                        <a class="pub-download" href="/pdf/{{ publication.pdf }}">Download <i class="fa fa-download"></i></a>,
+                        <a class="pub-doi" href="https://dx.doi.org/{{ publication.doi }}">doi:{{ publication.doi }}</a>{% if publication.arxiv %},
+                            <a class="pub-arxiv" href="https://arxiv.org/abs/{{ publication.arxiv }}">{{ publication.arxiv_long }}</a>
+                        {% endif %}
+                    </div>
+                </li>
+            {% endfor %}
         </ol>
     </div>
 {% endmacro %}
 
 {% macro preprints(preprints) %}
-    <div class="preprints">
-        <ol>
-            <div class="preprint">
-                {% for preprint in preprints %}
-                    <ul>
-                        <h3 class="pub-title">
-                            {{ preprint.title }}
-                        </h3>
-                        <div class="pub-authors">{{ preprint.authors }}</div>,
+    <div class="publications">
+        <ol class="publication">
+            {% for preprint in preprints %}
+                <li>
+                    <h3 class="pub-title">
+                        {{ preprint.title }}
+                    </h3>
+                    <div class="pub-authors">{{ preprint.authors }}</div>
 
-                        <div class="pub-download"><a href="/pdf/{{ preprint.pdf }}">Download</a></div>
-                        <div class="pub-arxiv"><a href="https://arxiv.org/abs/{{ preprint.arxiv }}">{{ preprint.arxiv_long }}</a></div>
-                    </ul>
-                {% endfor %}
-            </div>
+                    <a class="pub-download" href="/pdf/{{ preprint.pdf }}">Download <i class="fa fa-download"></i></a>,
+                    <a class="pub-arxiv" href="https://arxiv.org/abs/{{ preprint.arxiv }}">{{ preprint.arxiv_long }}</a>
+                </li>
+            {% endfor %}
         </ol>
     </div>
 {% endmacro %}
