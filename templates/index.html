@@ -8,46 +8,11 @@
 {% endblock meta_tags_in_head %}
 
 {% block content %}
-    {% import '_includes/post.html' as p with context %}
+    {% import '_includes/publications.html' as p with context %}
 
-    {# show the pinned post on the first page of the index #}
-    {% if PINNED_POST and articles_page.number == 1 and page_name == "index" %}
-        <h3 class="post-header">{% trans %}Vorgeschlagener Eintrag{% endtrans %}</h3>
-        <div class="post-pinned">
-            {% for article in articles %}
-                {% if article.slug == PINNED_POST %}
-                    {{ p.post(article) }}
-                {% endif %}
-            {% endfor %}
-        </div>
+    <h2>Publications</h2>
+    {{ p.publications(publication_details) }}
 
-        {# if there is no pinned post, we do not have to differentiate
-            the other posts #}
-        <h3 class="post-header">{% trans %}Neuste Einträge{% endtrans %}</h3>
-    {% endif %}
-
-    <div class="posts">
-        {% for article in articles_page.object_list %}
-            {# do not show the pinned post twice on one page #}
-            {% if articles_page.number != 1 or (PINNED_POST and article.slug != PINNED_POST) or page_name != "index" %}
-                {{ p.post(article) }}
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    <div class="post-navigation">
-        <nav class="pagination">
-            {% if articles_page.has_previous() %}
-                <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&larr;&nbsp;{% trans %}Neuer{% endtrans %}</a>
-            {% endif %}
-            {% if articles_page.has_previous() and articles_page.has_next() %}
-                <span class="separatordot">&middot;</span>
-            {% endif %}
-            {% if articles_page.has_next() %}
-                <a href="{{ SITEURL }}/{{ articles_next_page.url }}">{% trans %}Älter{% endtrans %}&nbsp;&rarr;</a>
-            {% endif %}
-            <br>
-            {{ articles_page.number }} / {{ articles_paginator.num_pages }}
-        </nav>
-    </div>
+    <h2>Preprints</h2>
+    {{ p.preprints(preprint_details) }}
 {% endblock %}

@@ -80,28 +80,14 @@
             <h1 class="brand-title"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
             {% if SITESUBTITLE %}<h2 class="brand-tagline">{{ SITESUBTITLE }}</h2>{% endif %}
 
-            <nav class="nav">
-                <ul class="nav-list container">
-                    {% if extra_siteurls %}
-                        {% for lang, url in extra_siteurls.items() %}
-                        <li class="nav-item">
-                            <a class="pure-button{% if lang == DEFAULT_LANG %} active{% endif %}" href="{{ url }}/"><i class="fa fa-globe"></i> {{ lang }}</a>
-                        </li>
-                        {% endfor %}
-                    {% endif %}
-                    <li class="nav-item">
-                        <a class="pure-button" href="{{ SITEURL }}/categories.html">{% trans %}Kategorien{% endtrans %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="pure-button" href="{{ SITEURL }}/tags.html">{% trans %}Tags{% endtrans %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="pure-button" href="{{ SITEURL }}/archives.html">{% trans %}Archiv{% endtrans %}</a>
-                    </li>
-                </ul>
-            </nav>
-
             <div class="container">
+                {% if extra_siteurls %}
+                    {% for lang, url in extra_siteurls.items() %}
+                    <li class="nav-item">
+                        <a class="pure-button{% if lang == DEFAULT_LANG %} active{% endif %}" href="{{ url }}/"><i class="fa fa-globe"></i> {{ lang }}</a>
+                    </li>
+                    {% endfor %}
+                {% endif %}
                 {% for entry in SOCIAL %}
                     {# handle links and no-links differently #}
                     {% if entry[1] %}
@@ -112,14 +98,6 @@
                         <i class="fa sidebar-social-links" title="{{ entry[0] }}">{{ entry[2] }}</i>
                     {% endif %}
                 {% endfor %}
-            </div>
-
-            <div class="container">
-                <form class="pure-form" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
-                    <fieldset>
-                        <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input" aria-label="Suche">
-                    </fieldset>
-                </form>
             </div>
 
             <div class="footer">
