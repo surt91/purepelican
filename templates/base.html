@@ -103,9 +103,14 @@
 
             <div class="container">
                 {% for entry in SOCIAL %}
-                    <a href="{{ entry[1] }}" title="{{ entry[0] }}" class="sidebar-social-links" target="_blank" rel="noopener">
-                        <i class="fa fa-{% if entry|length > 2 %}{{ entry[2] }}{% else %}{{ entry[0]|lower }}{% endif %} sidebar-social-links"></i>
-                    </a>
+                    {# handle links and no-links differently #}
+                    {% if entry[1] %}
+                        <a href="{{ entry[1] }}" title="{{ entry[0] }}" class="sidebar-social-links" target="_blank" rel="noopener">
+                            <i class="fa fa-{% if entry|length > 2 %}{{ entry[2] }}{% else %}{{ entry[0]|lower }}{% endif %} sidebar-social-links"></i>
+                        </a>
+                    {% else %}
+                        <i class="fa sidebar-social-links" title="{{ entry[0] }}">{{ entry[2] }}</i>
+                    {% endif %}
                 {% endfor %}
             </div>
 
