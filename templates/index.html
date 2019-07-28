@@ -15,7 +15,7 @@
     {{ p.publications(publication_details) }}
 
     <h2>Preprints</h2>
-    {{ p.preprints(preprint_details) }}
+    {{ p.preprints(preprint_details, publication_details|length + 1) }}
 
     <h2>Timeline</h2>
     {{ t.timeline(EVENTS) }}

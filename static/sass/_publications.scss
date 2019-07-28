@@ -49,6 +49,10 @@ ol.publication > li:before {
     margin-top: 0;
 }
 
+.pub-links {
+    color: $color-subtitle;
+}
+
 .pub-doi,
 .pub-arxiv,
 .pub-download,
