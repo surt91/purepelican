@@ -8,8 +8,13 @@
 {% endblock meta_tags_in_head %}
 
 {% block content %}
+    {% import '_includes/additional_text.html' as a with context %}
     {% import '_includes/publications.html' as p with context %}
     {% import '_includes/timeline.html' as t with context %}
+
+    {% for article in articles %}
+        {{ a.paste(article) }}
+    {% endfor %}
 
     <h2>{% trans %}Veröffentlichungen{% endtrans %}</h2>
     {{ p.publications(publication_details) }}
