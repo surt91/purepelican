@@ -7,17 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-22 20:37+0200\n"
+"POT-Creation-Date: 2019-07-28 21:44+0200\n"
 "PO-Revision-Date: 2018-07-22 20:41+0200\n"
+"Last-Translator: \n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
-"Last-Translator: \n"
-"X-Generator: Poedit 2.0.8\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: templates/404.html:8
 msgid "Diese Seite existiert nicht auf"
@@ -39,11 +38,11 @@ msgstr "Archive"
 msgid "Vollständiges Archiv von"
 msgstr "Complete Archive of"
 
-#: templates/article.html:29 templates/index.html:41
+#: templates/article.html:29
 msgid "Neuer"
 msgstr "Newer"
 
-#: templates/article.html:35 templates/index.html:47
+#: templates/article.html:35
 msgid "Älter"
 msgstr "Older"
 
@@ -59,13 +58,17 @@ msgstr "Categories of"
 msgid "Alle Kategorien"
 msgstr "All Categories"
 
-#: templates/index.html:15
-msgid "Vorgeschlagener Eintrag"
-msgstr "Recommended Article"
+#: templates/index.html:14
+msgid "Veröffentlichungen"
+msgstr "Publications"
 
-#: templates/index.html:26
-msgid "Neuste Einträge"
-msgstr "Newest Articles"
+#: templates/index.html:17
+msgid "Preprints"
+msgstr "Preprints"
+
+#: templates/index.html:20
+msgid "Aktivitäten"
+msgstr "Timeline"
 
 #: templates/tags.html:4
 msgid "Tags"

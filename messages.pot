@@ -1,21 +1,21 @@
 # Translations template for PROJECT.
-# Copyright (C) 2018 ORGANIZATION
+# Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-22 20:37+0200\n"
+"POT-Creation-Date: 2019-07-28 21:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: templates/404.html:8
 msgid "Diese Seite existiert nicht auf"
@@ -37,11 +37,11 @@ msgstr ""
 msgid "Vollständiges Archiv von"
 msgstr ""
 
-#: templates/article.html:29 templates/index.html:41
+#: templates/article.html:29
 msgid "Neuer"
 msgstr ""
 
-#: templates/article.html:35 templates/index.html:47
+#: templates/article.html:35
 msgid "Älter"
 msgstr ""
 
@@ -57,12 +57,16 @@ msgstr ""
 msgid "Alle Kategorien"
 msgstr ""
 
-#: templates/index.html:15
-msgid "Vorgeschlagener Eintrag"
+#: templates/index.html:14
+msgid "Veröffentlichungen"
 msgstr ""
 
-#: templates/index.html:26
-msgid "Neuste Einträge"
+#: templates/index.html:17
+msgid "Preprints"
+msgstr ""
+
+#: templates/index.html:20
+msgid "Aktivitäten"
 msgstr ""
 
 #: templates/tags.html:4
@@ -76,4 +80,3 @@ msgstr ""
 #: templates/tags.html:21
 msgid "Finde einen Tag"
 msgstr ""
-

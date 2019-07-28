@@ -11,12 +11,12 @@
     {% import '_includes/publications.html' as p with context %}
     {% import '_includes/timeline.html' as t with context %}
 
-    <h2>Publications</h2>
+    <h2>{% trans %}Veröffentlichungen{% endtrans %}</h2>
     {{ p.publications(publication_details) }}
 
-    <h2>Preprints</h2>
+    <h2>{% trans %}Preprints{% endtrans %}</h2>
     {{ p.preprints(preprint_details, publication_details|length + 1) }}
 
-    <h2>Timeline</h2>
+    <h2>{% trans %}Aktivitäten{% endtrans %}</h2>
     {{ t.timeline(EVENTS) }}
 {% endblock %}
