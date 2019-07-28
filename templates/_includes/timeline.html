@@ -1,0 +1,19 @@
+{% macro timeline(events) %}
+    <div class="timeline">
+        {% for event in events|sort(reverse=True, attribute='date') %}
+            <div class="timeline-item" date-is='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}'>
+                <div class="timeline-title">
+                    {{ event.name }}, {{ event.place }}
+                </div>
+                {% if event.presentation %}
+                    <span class="timeline-presentation">
+                        {{ event.presentation }},
+                    </span>
+                    {% if event.pdf %}
+                        <a class="timeline-download" href="/pdf/{{ event.pdf }}">Download <i class="fa fa-download"></i></a>,
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

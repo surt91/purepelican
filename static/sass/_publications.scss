@@ -1,4 +1,5 @@
-.publications {
+.publications,
+.timeline {
     margin-bottom: 1.2em;
 }
 
@@ -34,29 +35,40 @@ ol.publication > li:before {
     font-weight: bold;
 }
 
-.pub-doi,
-.pub-arxiv {
+.timeline-title {
     font: $font-post;
+    color: $color-title;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+
+.timeline-presentation {
+    font: $font-post;
+    color: $color-post;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+
+.pub-doi,
+.pub-arxiv,
+.pub-download,
+.timeline-download {
+    font: $font-post;
+    font-size: 1.1em;
     color: $color-subtitle;
     border-bottom: 1px dotted $color-subtitle;
     margin-bottom: 0.2em;
     margin-top: 0;
 }
 
+a.pub-doi:hover,
+a.pub-doi:focus,
+a.pub-arxiv:hover,
+a.pub-arxiv:focus,
 a.pub-download:hover,
-a.pub-download:focus {
+a.pub-download:focus,
+a.timeline-download:hover,
+a.timeline-download:focus {
+    text-decoration-line: none;
     border-bottom:: 1px solid $color-subtitle;
-}
-
-.pub-download {
-    color: $color-post;
-    font-weight: bold;
-    border-bottom: 1px dotted $color-post;
-    padding-bottom: 0.5px;
-    font: $font-code;
-}
-
-a.pub-download:hover,
-a.pub-download:focus {
-    border-bottom:: 1px solid $color-post;
 }

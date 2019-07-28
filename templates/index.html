@@ -9,10 +9,14 @@
 
 {% block content %}
     {% import '_includes/publications.html' as p with context %}
+    {% import '_includes/timeline.html' as t with context %}
 
     <h2>Publications</h2>
     {{ p.publications(publication_details) }}
 
     <h2>Preprints</h2>
     {{ p.preprints(preprint_details) }}
+
+    <h2>Timeline</h2>
+    {{ t.timeline(EVENTS) }}
 {% endblock %}

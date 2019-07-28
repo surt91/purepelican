@@ -1,0 +1,41 @@
+$border-color: #3d4f5d;
+
+.timeline-item {
+    padding: 3em 2em 2em;
+    position: relative;
+    color: $color-sectiontitle;
+    border-left: 2px solid $border-color;
+
+    &::before {
+        content: attr(date-is);
+        position: absolute;
+        left: 2em;
+        font-weight: bold;
+        top: 1em;
+        display: block;
+        font: $font-subtitle;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    &::after {
+        width: 10px;
+        height: 10px;
+        display: block;
+        top: 1em;
+        position: absolute;
+        left: -8px;
+        border-radius: 10px;
+        content: '';
+        border: 2px solid $border-color;
+        background: white;
+    }
+
+    &:last-child {
+        border-image: linear-gradient(
+            to bottom,
+            $border-color 60%,
+            rgba($border-color, 0)) 1 100%
+        ;
+    }
+}
