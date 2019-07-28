@@ -14,6 +14,9 @@
                         </div>
 
                         <div class="pub-links">
+                            {% if publication.comment %}
+                                <!-- {{ publication.comment }} -->
+                            {% endif %}
                             <a class="pub-download" href="/pdf/{{ publication.pdf }}">Download <i class="fa fa-download"></i></a>,
                             <a class="pub-doi" href="https://dx.doi.org/{{ publication.doi }}">doi:{{ publication.doi }}</a>{% if publication.arxiv %},
                                 <a class="pub-arxiv" href="https://arxiv.org/abs/{{ publication.arxiv }}">{{ publication.arxiv_long }}</a>
