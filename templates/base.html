@@ -54,8 +54,6 @@
 
     {% block head_links %}
         <!-- use cdn, because many clients will have it already cached -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
         {% assets filters="cssmin", output="css/main.css",
             "css/pure-min.css",
             "css/grids-responsive-min.css",
@@ -70,6 +68,7 @@
     {% include '_includes/feeds.html' %}
     {% endblock feed_links %}
 
+    <script src="https://kit.fontawesome.com/bf22e2e796.js"></script>
     {% include '_includes/analytics.html' %}
 </head>
 <body>
@@ -90,7 +89,7 @@
                                 {% elif lang == "de" %}
                                     onclick="switch_language_de()"
                                 {% endif %}
-                                href="{{ url }}/"><i class="fa fa-globe"></i> {{ lang }}</a>
+                                href="{{ url }}/"><i class="fas fa-globe"></i> {{ lang }}</a>
                         </div>
                     {% endfor %}
                 {% endif %}
@@ -98,10 +97,10 @@
                     {# handle links and no-links differently #}
                     {% if entry[1] %}
                         <a href="{{ entry[1] }}" title="{{ entry[0] }}" class="sidebar-social-links" target="_blank" rel="noopener">
-                            <i class="fa fa-{% if entry|length > 2 %}{{ entry[2] }}{% else %}{{ entry[0]|lower }}{% endif %} sidebar-social-links"></i>
+                            <i class="{% if entry|length > 2 %}fas fa-{{ entry[2] }}{% else %}fab fa-{{ entry[0]|lower }}{% endif %} sidebar-social-links"></i>
                         </a>
                     {% else %}
-                        <i class="fa sidebar-social-links" title="{{ entry[0] }}">{{ entry[2] }}</i>
+                        <i class="fas sidebar-social-links" title="{{ entry[0] }}">{{ entry[2] }}</i>
                     {% endif %}
                 {% endfor %}
             </div>

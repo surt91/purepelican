@@ -3,21 +3,30 @@
         {% for event in events|sort(reverse=True, attribute='date') %}
             <div class="timeline-item" date-is='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}'>
                 <div class="timeline-title">
-                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" target="_blank"><i class="fa fa-external-link"></i></a>{% endif %},
+                    {% if event.type == "graduation" %}
+                        <i class="fas fa-graduation-cap"></i>
+                    {% elif event.type == "conference" %}
+                        <i class="fas fa-comments"></i>
+                    {% elif event.type == "summerschool" %}
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    {% elif event.type == "visit" %}
+                        <i class="fas fa-handshake"></i>
+                    {% endif %}
+                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" target="_blank"><i class="fas fa-external-link-alt"></i></a>{% endif %},
                     {{ event.place }}
                 </div>
                 {% for presentation in event.presentations %}
                     <div class="timeline-presentation-item">
                         {% if presentation.type == "thesis" %}
-                            <i class="fa fa-book"></i>
+                            <i class="fas fa-book-open"></i>
                         {% elif presentation.type == "talk" %}
-                            <i class="fa fa-comment"></i>
+                            <i class="fas fa-comment"></i>
                         {% elif presentation.type == "poster" %}
-                            <i class="fa fa-file"></i>
+                            <i class="fas fa-file"></i>
                         {% endif %}
                         <span class="timeline-presentation">{{ presentation.title }},</span>
                         {% if presentation.pdf %}
-                            <a class="timeline-download" href="/pdf/{{ presentation.pdf }}">Download <i class="fa fa-download"></i></a>
+                            <a class="timeline-download" href="/pdf/{{ presentation.pdf }}">Download <i class="fas fa-download"></i></a>
                         {% endif %}
                         {% if presentation.link %}
                             <a class="timeline-download" href="{{ presentation.link }}">View</a>
