@@ -32,8 +32,10 @@ function init_language(current) {
         // nothing known saved, guess language
         var userLang = navigator.language || navigator.userLanguage;
         if (userLang.substring(0, 1).toLowerCase() == "de") {
+            switch_language_de();
             window.location.replace("/");
         } else {
+            switch_language_en();
             window.location.replace("/en/");
         }
     }
