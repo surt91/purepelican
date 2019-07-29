@@ -1,8 +1,8 @@
 {% macro smo_metadata(article) %}
     <meta name="twitter:title" content="{{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %}"/>
     <meta name="twitter:description" content="{{article.summary|striptags|e}}"/>
-    <meta name="og:title" content="{{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %}"/>
-    <meta name="og:description" content="{{article.summary|striptags|e}}"/>
+    <meta property="og:title" content="{{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %}"/>
+    <meta property="og:description" content="{{article.summary|striptags|e}}"/>
 
     <meta property="og:url" content="{{ article.url }}"/>
 

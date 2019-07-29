@@ -1,12 +1,5 @@
 {% extends 'base.html' %}
 
-{% block meta_tags_in_head %}
-    {% if FEATURED_IMAGE %}
-        <meta property="og:image" content="{{FEATURED_IMAGE}}">
-        <meta name="twitter:image" content="{{FEATURED_IMAGE}}">
-    {% endif %}
-{% endblock meta_tags_in_head %}
-
 {% block content %}
     {% import '_includes/additional_text.html' as a with context %}
     {% import '_includes/publications.html' as p with context %}
