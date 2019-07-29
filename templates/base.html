@@ -83,8 +83,15 @@
             <div class="container">
                 {% if extra_siteurls %}
                     {% for lang, url in extra_siteurls.items() %}
+
                     <li class="nav-item">
-                        <a class="pure-button{% if lang == DEFAULT_LANG %} active{% endif %}" href="{{ url }}/"><i class="fa fa-globe"></i> {{ lang }}</a>
+                        <a class="pure-button{% if lang == DEFAULT_LANG %} active{% endif %}"
+                            {% if lang == "en" %}
+                                onclick="switch_language_en()"
+                            {% elif lang == "de" %}
+                                onclick="switch_language_de()"
+                            {% endif %}
+                            href="{{ url }}/"><i class="fa fa-globe"></i> {{ lang }}</a>
                     </li>
                     {% endfor %}
                 {% endif %}
@@ -121,6 +128,10 @@
         }
     </script>
     <script src="/theme/js/img.js"></script>
+    <script src="/theme/js/lang.js"></script>
+    <script>
+        init_language("{{ DEFAULT_LANG }}");
+    </script>
     <script>console.log("Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn")</script>
     <script type="text/javascript" src="/theme/fx/rythm.js"></script>
     <script type="text/javascript" src="/theme/fx/totally_serious_script.js"></script>
