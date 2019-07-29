@@ -3,14 +3,15 @@
         {% for event in events|sort(reverse=True, attribute='date') %}
             <div class="timeline-item" date-is='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}'>
                 <div class="timeline-title">
-                    {{ event.name }}, {{ event.place }}
+                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" target="_blank"><i class="fa fa-external-link"></i></a>{% endif %},
+                    {{ event.place }}
                 </div>
                 {% for presentation in event.presentations %}
                     <div class="timeline-presentation-item">
                         {% if presentation.type == "thesis" %}
                             <i class="fa fa-book"></i>
                         {% elif presentation.type == "talk" %}
-                            <i class="fa fa-tv"></i>
+                            <i class="fa fa-comment"></i>
                         {% elif presentation.type == "poster" %}
                             <i class="fa fa-file"></i>
                         {% endif %}
