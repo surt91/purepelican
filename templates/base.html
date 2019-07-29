@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
     <meta charset="utf-8">
@@ -83,16 +83,15 @@
             <div class="container">
                 {% if extra_siteurls %}
                     {% for lang, url in extra_siteurls.items() %}
-
-                    <li class="nav-item">
-                        <a class="pure-button{% if lang == DEFAULT_LANG %} active{% endif %}"
-                            {% if lang == "en" %}
-                                onclick="switch_language_en()"
-                            {% elif lang == "de" %}
-                                onclick="switch_language_de()"
-                            {% endif %}
-                            href="{{ url }}/"><i class="fa fa-globe"></i> {{ lang }}</a>
-                    </li>
+                        <div class="nav-item">
+                            <a class="pure-button{% if lang == DEFAULT_LANG %} active{% endif %}"
+                                {% if lang == "en" %}
+                                    onclick="switch_language_en()"
+                                {% elif lang == "de" %}
+                                    onclick="switch_language_de()"
+                                {% endif %}
+                                href="{{ url }}/"><i class="fa fa-globe"></i> {{ lang }}</a>
+                        </div>
                     {% endfor %}
                 {% endif %}
                 {% for entry in SOCIAL %}
@@ -120,13 +119,6 @@
 </div>
 
 {% block script %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-    <script>
-        function validateForm(query)
-        {
-            return (query.length > 0);
-        }
-    </script>
     <script src="/theme/js/img.js"></script>
     <script src="/theme/js/lang.js"></script>
     <script>
