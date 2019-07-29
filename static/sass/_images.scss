@@ -43,5 +43,13 @@ img {
 
 img.align-right {
     float: right;
-    padding: 5px;
+    padding-left: 1em;
+
+    @media screen and (max-width: $break-smallest)
+    {
+        float: none;
+        max-width: 100%;
+        padding-left: 0;
+        margin-right: 0;
+    }
 }
