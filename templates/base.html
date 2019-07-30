@@ -56,12 +56,11 @@
         <!-- use cdn, because many clients will have it already cached -->
         {% assets filters="cssmin", output="css/main.css",
             "css/pure-min.css",
-            "css/grids-responsive-min.css",
-            "tipuesearch/tipuesearch.css"
+            "css/grids-responsive-min.css"
         %}
-            <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}">
+            <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}" />
         {% endassets %}
-        <link rel="stylesheet" type="text/css" href="/theme/css/blog.css">
+        <link rel="stylesheet" type="text/css" href="/theme/css/blog.css" />
     {% endblock head_links %}
 
     {% block feed_links %}
@@ -118,7 +117,6 @@
 </div>
 
 {% block script %}
-    <script src="/theme/js/img.js"></script>
     <script src="/theme/js/lang.js"></script>
     <script>
         init_language("{{ DEFAULT_LANG }}");
