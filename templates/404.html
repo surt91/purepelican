@@ -11,15 +11,7 @@
 {% block content %}
     <h2 class="title">{% trans %}Seite nicht gefunden{% endtrans %}</h2>
 
-    {% trans %}Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?{% endtrans %}
-    <div class="input-append">
-        <form class="pure-form" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
-            <fieldset>
-                <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input_404">
-            </fieldset>
-        </form>
-    </div>
-
+    {% trans %}Anscheinend existiert diese Seite nicht. <a href="/">Hier geht es zur Startseite.</a>{% endtrans %}
     <div class="center">
         <video poster="/theme/img/404.png" loop autoplay class="center not-found-video">
             <source src="/theme/vid/404.webm" type="video/webm; codecs=vp9,vorbis">

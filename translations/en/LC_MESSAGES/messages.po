@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-07-28 21:44+0200\n"
+"POT-Creation-Date: 2019-07-30 19:16+0200\n"
 "PO-Revision-Date: 2018-07-22 20:41+0200\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -27,57 +27,20 @@ msgid "Seite nicht gefunden"
 msgstr "Site not found"
 
 #: templates/404.html:14
-msgid "Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?"
-msgstr "Apparently this site does not exist. Maybe a search will help?"
+msgid ""
+"Anscheinend existiert diese Seite nicht. <a href=\"/\">Hier geht es zur "
+"Startseite.</a>"
+msgstr ""
+"Apparently this site does not exist. <a href=\"/en/\">This way to the homepage.</a>"
 
-#: templates/archives.html:4 templates/archives.html:12
-msgid "Archiv"
-msgstr "Archive"
-
-#: templates/archives.html:8
-msgid "Vollständiges Archiv von"
-msgstr "Complete Archive of"
-
-#: templates/article.html:29
-msgid "Neuer"
-msgstr "Newer"
-
-#: templates/article.html:35
-msgid "Älter"
-msgstr "Older"
-
-#: templates/categories.html:4
-msgid "Kategorien"
-msgstr "Categories"
-
-#: templates/categories.html:8
-msgid "Kategorien von"
-msgstr "Categories of"
-
-#: templates/categories.html:17
-msgid "Alle Kategorien"
-msgstr "All Categories"
-
-#: templates/index.html:14
+#: templates/index.html:12
 msgid "Veröffentlichungen"
 msgstr "Publications"
 
-#: templates/index.html:17
+#: templates/index.html:15
 msgid "Preprints"
 msgstr "Preprints"
 
-#: templates/index.html:20
+#: templates/index.html:18
 msgid "Aktivitäten"
 msgstr "Timeline"
-
-#: templates/tags.html:4
-msgid "Tags"
-msgstr "Tags"
-
-#: templates/tags.html:8 templates/tags.html:17
-msgid "Alle Tags"
-msgstr "All Tags"
-
-#: templates/tags.html:21
-msgid "Finde einen Tag"
-msgstr "Find a Tag"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-07-28 21:44+0200\n"
+"POT-Creation-Date: 2019-07-30 19:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,57 +26,20 @@ msgid "Seite nicht gefunden"
 msgstr ""
 
 #: templates/404.html:14
-msgid "Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?"
+msgid ""
+"Anscheinend existiert diese Seite nicht. <a href=\"/\">Hier geht es zur "
+"Startseite.</a>"
 msgstr ""
 
-#: templates/archives.html:4 templates/archives.html:12
-msgid "Archiv"
-msgstr ""
-
-#: templates/archives.html:8
-msgid "Vollständiges Archiv von"
-msgstr ""
-
-#: templates/article.html:29
-msgid "Neuer"
-msgstr ""
-
-#: templates/article.html:35
-msgid "Älter"
-msgstr ""
-
-#: templates/categories.html:4
-msgid "Kategorien"
-msgstr ""
-
-#: templates/categories.html:8
-msgid "Kategorien von"
-msgstr ""
-
-#: templates/categories.html:17
-msgid "Alle Kategorien"
-msgstr ""
-
-#: templates/index.html:14
+#: templates/index.html:12
 msgid "Veröffentlichungen"
 msgstr ""
 
-#: templates/index.html:17
+#: templates/index.html:15
 msgid "Preprints"
 msgstr ""
 
-#: templates/index.html:20
+#: templates/index.html:18
 msgid "Aktivitäten"
 msgstr ""
 
-#: templates/tags.html:4
-msgid "Tags"
-msgstr ""
-
-#: templates/tags.html:8 templates/tags.html:17
-msgid "Alle Tags"
-msgstr ""
-
-#: templates/tags.html:21
-msgid "Finde einen Tag"
-msgstr ""
