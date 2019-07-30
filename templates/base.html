@@ -44,8 +44,7 @@
     {% endblock %}
 
     {% if lang_siteurls %}
-        <link rel="alternate" hreflang="{{ main_lang }}" href="{{ main_siteurl }}/{{ output_file }}" />
-        {% for lang, url in extra_siteurls.items() %}
+        {% for lang, url in lang_siteurls.items() %}
         <link rel="alternate" hreflang="{{ lang }}" href="{{ url }}/{{ output_file }}" />
         {% endfor %}
         <link rel="alternate" hreflang="x-default" href="{{ main_siteurl }}/{{ output_file }}" />
