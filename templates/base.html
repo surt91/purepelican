@@ -87,7 +87,13 @@
                                 {% elif lang == "de" %}
                                     onclick="switch_language_de()"
                                 {% endif %}
-                                href="{{ url }}/"><i class="fas fa-globe"></i> {{ lang }}</a>
+                                href="{{ url }}/"><i
+                                {% if lang == "en" %}
+                                    class="fas fa-globe-americas"
+                                {% else %}
+                                    class="fas fa-globe-europe"
+                                {% endif %}
+                                ></i> {{ lang }}</a>
                         </div>
                     {% endfor %}
                 {% endif %}
