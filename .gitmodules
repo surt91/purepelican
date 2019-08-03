@@ -1,3 +1,6 @@
 [submodule "static/academicons"]
 	path = static/academicons
 	url = https://github.com/surt91/academicons.git
+[submodule "static/fontawesome"]
+	path = static/fontawesome
+	url = https://github.com/FortAwesome/Font-Awesome.git

@@ -50,7 +50,6 @@
         <link rel="alternate" hreflang="x-default" href="{{ main_siteurl }}/{{ output_file }}" />
     {% endif %}
 
-
     {% block head_links %}
         <!-- use cdn, because many clients will have it already cached -->
         {% assets filters="cssmin", output="css/main.css",
@@ -60,14 +59,24 @@
         %}
             <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}" />
         {% endassets %}
+        {% assets filters="cssmin", output="fontawesome/css/main.css",
+            "fontawesome/css/fontawesome.css",
+            "fontawesome/css/brands.css",
+            "fontawesome/css/solid.css"
+        %}
+            <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}" />
+        {% endassets %}
+        {% assets filters="cssmin", output="academicons/css/main.css",
+            "academicons/css/academicons.css"
+        %}
+            <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}" />
+        {% endassets %}
     {% endblock head_links %}
 
     {% block feed_links %}
     {% include '_includes/feeds.html' %}
     {% endblock feed_links %}
 
-    <script src="https://kit.fontawesome.com/bf22e2e796.js"></script>
-    <link rel="stylesheet" href="/theme/academicons/css/academicons.min.css"/>
     {% include '_includes/analytics.html' %}
 </head>
 <body>
