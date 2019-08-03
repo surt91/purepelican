@@ -17,9 +17,9 @@
                             {% if publication.comment %}
                                 <!-- {{ publication.comment }} -->
                             {% endif %}
-                            <a class="pub-download" href="/pdf/{{ publication.pdf }}">Download <i class="fas fa-download"></i></a>,
-                            <a class="pub-doi" href="https://dx.doi.org/{{ publication.doi }}" rel="nofollow" target="_blank">doi:{{ publication.doi }}</a>{% if publication.arxiv %},
-                                <a class="pub-arxiv" href="https://arxiv.org/abs/{{ publication.arxiv }}" rel="nofollow" target="_blank">{{ publication.arxiv_long }}</a>
+                            <a class="pub-download" href="/pdf/{{ publication.pdf }}"><i class="fas fa-download"></i> Download</a>,
+                            <a class="pub-doi" href="https://dx.doi.org/{{ publication.doi }}" rel="nofollow" target="_blank"><i class="ai ai-doi"></i> {{ publication.doi }}</a>{% if publication.arxiv %},
+                                <a class="pub-arxiv" href="https://arxiv.org/abs/{{ publication.arxiv }}" rel="nofollow" target="_blank"><i class="ai ai-arxiv"></i> {{ publication.arxiv_long }}</a>
                             {% endif %}
                         </div>
                     </div>

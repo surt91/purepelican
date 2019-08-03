@@ -1,0 +1,3 @@
+[submodule "static/academicons"]
+	path = static/academicons
+	url = https://github.com/surt91/academicons.git
