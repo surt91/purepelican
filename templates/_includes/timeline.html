@@ -28,10 +28,10 @@
                         {% endif %}
                         <span class="timeline-presentation">{{ presentation.title }},</span>
                         {% if presentation.pdf %}
-                            <a class="timeline-download" href="/pdf/{{ presentation.pdf }}">Download <i class="fas fa-download"></i></a>
+                            <a class="timeline-download nowrap" href="/pdf/{{ presentation.pdf }}"><i class="fas fa-download"></i> Download</a>
                         {% endif %}
                         {% if presentation.link %}
-                            <a class="timeline-download" href="{{ presentation.link }}">View</a>
+                            <a class="timeline-download nowrap" href="{{ presentation.link }}">View</a>
                         {% endif %}
                     </div>
                 {% endfor %}
