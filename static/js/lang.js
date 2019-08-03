@@ -13,7 +13,7 @@ function lsTest(){
 function init_language(current) {
     // the default language is english, we will only guess an alternative, if
     // we are on the root, i.e., english version
-    if(lang != "en") {
+    if(current != "en") {
         return;
     }
 
