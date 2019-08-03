@@ -9,12 +9,12 @@
         {{ a.paste(article) }}
     {% endfor %}
 
-    <h2>{% trans %}Veröffentlichungen{% endtrans %}</h2>
+    <h2>{% trans %}Publications{% endtrans %}</h2>
     {{ p.publications(publication_details) }}
 
     <h2>{% trans %}Preprints{% endtrans %}</h2>
     {{ p.preprints(preprint_details, publication_details|length + 1) }}
 
-    <h2>{% trans %}Aktivitäten{% endtrans %}</h2>
+    <h2>{% trans %}Timeline{% endtrans %}</h2>
     {{ t.timeline(EVENTS) }}
 {% endblock %}

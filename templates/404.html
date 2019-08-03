@@ -5,13 +5,13 @@
 {% endblock title %}
 
 {% block head_description %}
-{% trans %}Diese Seite existiert nicht.{% endtrans %}
+{% trans %}This site does not exist.{% endtrans %}
 {% endblock head_description %}
 
 {% block content %}
-    <h2 class="title">{% trans %}Seite nicht gefunden{% endtrans %}</h2>
+    <h2 class="title">{% trans %}File not found{% endtrans %}</h2>
 
-    {% trans %}Anscheinend existiert diese Seite nicht. <a href="/">Hier geht es zur Startseite.</a>{% endtrans %}
+    {% trans %}Apparently this site does not exist. <a href="/en/">This way to the homepage.</a>{% endtrans %}
     <div class="center">
         <video poster="/theme/img/404.png" loop autoplay class="center not-found-video">
             <source src="/theme/vid/404.webm" type="video/webm; codecs=vp9,vorbis">

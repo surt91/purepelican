@@ -17,6 +17,11 @@ function init_language(current) {
         return;
     }
 
+    // do not guess a language, if a language is explicitly in the url
+    if(window.location != "/") {
+        return;
+    }
+
     var lang = localStorage.getItem("language");
 
     // do we need to change the language?
