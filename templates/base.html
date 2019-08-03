@@ -15,7 +15,7 @@
 
     <link rel="manifest" href="/manifest.json">
 
-    {% include '_includes/icons.html' %}
+    {% include 'includes/icons.html' %}
 
     <meta property="og:site_name" content="{{ SITENAME|striptags|e }}">
     <meta property="og:article:author" content="{{ AUTHOR }}">
@@ -27,7 +27,7 @@
     <meta name="twitter:card" content="summary">
 
     {% block meta_tags_in_head %}
-        {% include '_includes/smo_metadata.html' %}
+        {% include 'includes/smo_metadata.html' %}
 
         <meta property="og:title" content="{{ self.title() }}">
         <meta name="twitter:title" content="{{ self.title() }}">
@@ -74,10 +74,10 @@
     {% endblock head_links %}
 
     {% block feed_links %}
-    {% include '_includes/feeds.html' %}
+    {% include 'includes/feeds.html' %}
     {% endblock feed_links %}
 
-    {% include '_includes/analytics.html' %}
+    {% include 'includes/analytics.html' %}
 </head>
 <body>
 

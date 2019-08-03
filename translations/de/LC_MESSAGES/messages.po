@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-03 11:31+0200\n"
+"POT-Creation-Date: 2019-08-03 18:20+0200\n"
 "PO-Revision-Date: 2019-08-03 11:15+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -28,9 +28,11 @@ msgstr "Seite nicht gefunden"
 
 #: templates/404.html:14
 msgid ""
-"Apparently this site does not exist. <a href=\"/en/\">This way to the"
-" homepage.</a>"
-msgstr "Anscheinend existiert diese Seite nicht. <a href=\"/de/\">Hier geht es zur Startseite.</a>"
+"Apparently this site does not exist. <a href=\"/en/\">This way to the "
+"homepage.</a>"
+msgstr ""
+"Anscheinend existiert diese Seite nicht. <a href=\"/de/\">Hier geht es "
+"zur Startseite.</a>"
 
 #: templates/index.html:12
 msgid "Publications"
@@ -43,3 +45,44 @@ msgstr "Preprints"
 #: templates/index.html:18
 msgid "Timeline"
 msgstr "Aktivitäten"
+
+#: templates/includes/publications.html:20
+#: templates/includes/publications.html:41 templates/includes/timeline.html:33
+msgid "Download"
+msgstr "Herunterladen"
+
+#: templates/includes/timeline.html:8
+msgid "Graduation"
+msgstr "Abschluss"
+
+#: templates/includes/timeline.html:10
+msgid "Conference"
+msgstr "Konferenz"
+
+#: templates/includes/timeline.html:12
+msgid "Summer school"
+msgstr "Sommerakademie"
+
+#: templates/includes/timeline.html:14
+msgid "Research visit"
+msgstr "Forschungsbesuch"
+
+#: templates/includes/timeline.html:16
+msgid "Work"
+msgstr "Arbeit"
+
+#: templates/includes/timeline.html:25
+msgid "Thesis"
+msgstr "Abschlussarbeit"
+
+#: templates/includes/timeline.html:27
+msgid "Talk"
+msgstr "Vortrag"
+
+#: templates/includes/timeline.html:29
+msgid "Poster"
+msgstr "Poster"
+
+#: templates/includes/timeline.html:36
+msgid "View"
+msgstr "Ansehen"

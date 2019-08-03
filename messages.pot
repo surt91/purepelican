@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-03 11:31+0200\n"
+"POT-Creation-Date: 2019-08-03 18:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,8 +27,8 @@ msgstr ""
 
 #: templates/404.html:14
 msgid ""
-"Apparently this site does not exist. <a href=\"/en/\">This way to the"
-" homepage.</a>"
+"Apparently this site does not exist. <a href=\"/en/\">This way to the "
+"homepage.</a>"
 msgstr ""
 
 #: templates/index.html:12
@@ -42,3 +42,45 @@ msgstr ""
 #: templates/index.html:18
 msgid "Timeline"
 msgstr ""
+
+#: templates/includes/publications.html:20
+#: templates/includes/publications.html:41 templates/includes/timeline.html:33
+msgid "Download"
+msgstr ""
+
+#: templates/includes/timeline.html:8
+msgid "Graduation"
+msgstr ""
+
+#: templates/includes/timeline.html:10
+msgid "Conference"
+msgstr ""
+
+#: templates/includes/timeline.html:12
+msgid "Summer school"
+msgstr ""
+
+#: templates/includes/timeline.html:14
+msgid "Research visit"
+msgstr ""
+
+#: templates/includes/timeline.html:16
+msgid "Work"
+msgstr ""
+
+#: templates/includes/timeline.html:25
+msgid "Thesis"
+msgstr ""
+
+#: templates/includes/timeline.html:27
+msgid "Talk"
+msgstr ""
+
+#: templates/includes/timeline.html:29
+msgid "Poster"
+msgstr ""
+
+#: templates/includes/timeline.html:36
+msgid "View"
+msgstr ""
+

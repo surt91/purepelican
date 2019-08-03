@@ -5,15 +5,15 @@
                 <div class="timeline-title">
                     <span class="timeline-symbol">
                         {% if event.type == "graduation" %}
-                            <i class="fas fa-graduation-cap fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-graduation-cap fa-fw" aria-hidden="true" title="{% trans %}Graduation{% endtrans %}"></i>
                         {% elif event.type == "conference" %}
-                            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-comments fa-fw" aria-hidden="true" title="{% trans %}Conference{% endtrans %}"></i>
                         {% elif event.type == "summerschool" %}
-                            <i class="fas fa-chalkboard-teacher fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-chalkboard-teacher fa-fw" aria-hidden="true" title="{% trans %}Summer school{% endtrans %}"></i>
                         {% elif event.type == "visit" %}
-                            <i class="fas fa-handshake fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-handshake fa-fw" aria-hidden="true" title="{% trans %}Research visit{% endtrans %}"></i>
                         {% elif event.type == "work" %}
-                            <i class="fas fa-handshake fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-handshake fa-fw" aria-hidden="true" title="{% trans %}Work{% endtrans %}"></i>
                         {% endif %}
                     </span>
                     {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
@@ -22,18 +22,18 @@
                 {% for presentation in event.presentations %}
                     <div class="timeline-presentation-item">
                         {% if presentation.type == "thesis" %}
-                            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-book-open fa-fw" aria-hidden="true" title="{% trans %}Thesis{% endtrans %}"></i>
                         {% elif presentation.type == "talk" %}
-                            <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-comment fa-fw" aria-hidden="true" title="{% trans %}Talk{% endtrans %}"></i>
                         {% elif presentation.type == "poster" %}
-                            <i class="fas fa-file fa-fw" aria-hidden="true"></i>
+                            <i class="fas fa-file fa-fw" aria-hidden="true" title="{% trans %}Poster{% endtrans %}"></i>
                         {% endif %}
                         <span class="timeline-presentation">{{ presentation.title }},</span>
                         {% if presentation.pdf %}
-                            <a class="timeline-download nowrap" href="/pdf/{{ presentation.pdf }}"><i class="fas fa-download"></i> Download</a>
+                            <a class="timeline-download nowrap" href="/pdf/{{ presentation.pdf }}"><i class="fas fa-download" aria-hidden="true"></i> {% trans %}Download{% endtrans %}</a>
                         {% endif %}
                         {% if presentation.link %}
-                            <a class="timeline-download nowrap" href="{{ presentation.link }}">View</a>
+                            <a class="timeline-download nowrap" href="{{ presentation.link }}"><i class="fas fa-eye" aria-hidden="true"></i> {% trans %}View{% endtrans %}</a>
                         {% endif %}
                     </div>
                 {% endfor %}

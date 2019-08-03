@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% import '_includes/additional_text.html' as a with context %}
-    {% import '_includes/publications.html' as p with context %}
-    {% import '_includes/timeline.html' as t with context %}
+    {% import 'includes/additional_text.html' as a with context %}
+    {% import 'includes/publications.html' as p with context %}
+    {% import 'includes/timeline.html' as t with context %}
 
     {% for article in articles %}
         {{ a.paste(article) }}
