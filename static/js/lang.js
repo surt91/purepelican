@@ -11,14 +11,15 @@ function lsTest(){
 }
 
 function init_language(current) {
-    // if local storage is not available, just do nothing
-    // otherwise we will end in an infinite loop
-    if (lsTest === false) {
+    // the default language is english, we will only guess an alternative, if
+    // we are on the root, i.e., english version
+    if(lang != "en") {
         return;
     }
 
-    // do not guess a language, if a language is explicitly in the url
-    if(window.location != "/") {
+    // if local storage is not available, just do nothing
+    // otherwise we might end in an infinite loop
+    if (lsTest === false) {
         return;
     }
 
@@ -30,24 +31,31 @@ function init_language(current) {
     }
 
     if (lang == "de") {
-        window.location.replace("/");
-    } else if (lang=="en") {
-        window.location.replace("/en/");
+        window.location.replace("/de/");
+    } else if (lang=="fr") {
+        window.location.replace("/fr/");
     } else {
         // nothing known saved, guess language
         var userLang = navigator.language || navigator.userLanguage;
         if (userLang.substring(0, 1).toLowerCase() == "de") {
             switch_language_de();
-            window.location.replace("/");
+            window.location.replace("/de/");
+        } else if (userLang.substring(0, 1).toLowerCase() == "fr") {
+            switch_language_fr();
+            window.location.replace("/fr/");
         } else {
             switch_language_en();
-            window.location.replace("/en/");
+            // we are already on the default, english page, so do nothing
         }
     }
 }
 
 function switch_language_de() {
     localStorage.setItem("language", "de");
+}
+
+function switch_language_fr() {
+    localStorage.setItem("language", "fr");
 }
 
 function switch_language_en() {
