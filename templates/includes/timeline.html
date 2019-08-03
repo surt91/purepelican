@@ -1,7 +1,7 @@
 {% macro timeline(events) %}
     <div class="timeline">
         {% for event in events|sort(reverse=True, attribute='date') %}
-            <div class="timeline-item" date-is='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}'>
+            <div class="timeline-item" data-date='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}'>
                 <div class="timeline-title">
                     <span class="timeline-symbol">
                         {% if event.type == "graduation" %}

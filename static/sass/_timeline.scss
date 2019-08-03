@@ -7,7 +7,7 @@ $border-color: #3d4f5d;
     border-left: 2px solid $border-color;
 
     &::before {
-        content: attr(date-is);
+        content: attr(data-date);
         position: absolute;
         left: 2em;
         font-weight: bold;
