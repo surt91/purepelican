@@ -19,12 +19,12 @@ msgstr ""
 "Generated-By: Babel 2.7.0\n"
 
 #: templates/404.html:8
-msgid "Diese Seite existiert nicht auf"
-msgstr "This site does not exist on"
+msgid "Diese Seite existiert nicht."
+msgstr "This site does not exist."
 
 #: templates/404.html:12
 msgid "Seite nicht gefunden"
-msgstr "Site not found"
+msgstr "File not found"
 
 #: templates/404.html:14
 msgid ""
