@@ -17,9 +17,9 @@
                             {% if publication.comment %}
                                 <!-- {{ publication.comment }} -->
                             {% endif %}
-                            <a class="pub-download nowrap" href="/pdf/{{ publication.pdf }}"><i class="fas fa-download"></i> Download</a>,
-                            <a class="pub-doi nowrap" href="https://dx.doi.org/{{ publication.doi }}" rel="nofollow" target="_blank"><i class="ai ai-doi"></i> {{ publication.doi }}</a>{% if publication.arxiv %},
-                                <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ publication.arxiv }}" rel="nofollow" target="_blank"><i class="ai ai-arxiv"></i> {{ publication.arxiv_long }}</a>
+                            <a class="pub-download nowrap" href="/pdf/{{ publication.pdf }}"><i class="fas fa-download" aria-hidden="true"></i> Download</a>,
+                            <a class="pub-doi nowrap" href="https://dx.doi.org/{{ publication.doi }}" rel="nofollow" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ publication.doi }}</a>{% if publication.arxiv %},
+                                <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ publication.arxiv }}" rel="nofollow" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i> {{ publication.arxiv_long }}</a>
                             {% endif %}
                         </div>
                     </div>
@@ -38,8 +38,8 @@
                     <div class="pub-authors">{{ preprint.authors }}</div>
 
                     <div class="pub-links">
-                        <a class="pub-download nowrap" href="/pdf/{{ preprint.pdf }}"><i class="fas fa-download"></i> Download</a>,
-                        <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ preprint.arxiv }}" rel="nofollow" target="_blank"><i class="ai ai-arxiv"></i> {{ preprint.arxiv_long }}</a>
+                        <a class="pub-download nowrap" href="/pdf/{{ preprint.pdf }}"><i class="fas fa-download" aria-hidden="true"></i> Download</a>,
+                        <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ preprint.arxiv }}" rel="nofollow" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i> {{ preprint.arxiv_long }}</a>
                     </div>
                 </li>
             {% endfor %}

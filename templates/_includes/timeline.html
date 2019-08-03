@@ -5,15 +5,15 @@
                 <div class="timeline-title">
                     <span class="timeline-symbol">
                         {% if event.type == "graduation" %}
-                            <i class="fas fa-graduation-cap fa-fw"></i>
+                            <i class="fas fa-graduation-cap fa-fw" aria-hidden="true"></i>
                         {% elif event.type == "conference" %}
-                            <i class="fas fa-comments fa-fw"></i>
+                            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
                         {% elif event.type == "summerschool" %}
-                            <i class="fas fa-chalkboard-teacher fa-fw"></i>
+                            <i class="fas fa-chalkboard-teacher fa-fw" aria-hidden="true"></i>
                         {% elif event.type == "visit" %}
-                            <i class="fas fa-handshake fa-fw"></i>
+                            <i class="fas fa-handshake fa-fw" aria-hidden="true"></i>
                         {% elif event.type == "work" %}
-                            <i class="fas fa-handshake fa-fw"></i>
+                            <i class="fas fa-handshake fa-fw" aria-hidden="true"></i>
                         {% endif %}
                     </span>
                     {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
@@ -22,11 +22,11 @@
                 {% for presentation in event.presentations %}
                     <div class="timeline-presentation-item">
                         {% if presentation.type == "thesis" %}
-                            <i class="fas fa-book-open fa-fw"></i>
+                            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
                         {% elif presentation.type == "talk" %}
-                            <i class="fas fa-comment fa-fw"></i>
+                            <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
                         {% elif presentation.type == "poster" %}
-                            <i class="fas fa-file fa-fw"></i>
+                            <i class="fas fa-file fa-fw" aria-hidden="true"></i>
                         {% endif %}
                         <span class="timeline-presentation">{{ presentation.title }},</span>
                         {% if presentation.pdf %}
