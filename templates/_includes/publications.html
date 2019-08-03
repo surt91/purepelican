@@ -38,8 +38,8 @@
                     <div class="pub-authors">{{ preprint.authors }}</div>
 
                     <div class="pub-links">
-                        <a class="pub-download" href="/pdf/{{ preprint.pdf }}">Download <i class="fas fa-download"></i></a>,
-                        <a class="pub-arxiv" href="https://arxiv.org/abs/{{ preprint.arxiv }}" rel="nofollow" target="_blank">{{ preprint.arxiv_long }}</a>
+                        <a class="pub-download" href="/pdf/{{ preprint.pdf }}"><i class="fas fa-download"></i> Download</a>,
+                        <a class="pub-arxiv" href="https://arxiv.org/abs/{{ preprint.arxiv }}" rel="nofollow" target="_blank"><i class="ai ai-arxiv"></i> {{ preprint.arxiv_long }}</a>
                     </div>
                 </li>
             {% endfor %}
