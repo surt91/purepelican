@@ -14,7 +14,7 @@
                     {% elif event.type == "work" %}
                         <i class="fas fa-handshake"></i>
                     {% endif %}
-                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" target="_blank"><i class="fas fa-external-link-alt"></i></a>{% endif %},
+                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
                     {{ event.place }}
                 </div>
                 {% for presentation in event.presentations %}
