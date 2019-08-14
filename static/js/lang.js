@@ -1,3 +1,11 @@
+init_language(document.documentElement.lang);
+
+let lbtns = document.getElementsByClassName("language-button");
+for(var i=0; i < lbtns.length; i++) {
+    let lang = lbtns[i].dataset.lang;
+    lbtns[i].addEventListener('click', x => switch_language(lang));
+}
+
 // https://stackoverflow.com/a/16427747/1698412
 function lsTest(){
     var test = 'test';
@@ -50,14 +58,6 @@ function init_language(current) {
     }
 }
 
-function switch_language_de() {
-    localStorage.setItem("language", "de");
-}
-
-function switch_language_fr() {
-    localStorage.setItem("language", "fr");
-}
-
-function switch_language_en() {
-    localStorage.setItem("language", "en");
+function switch_language(lang) {
+    localStorage.setItem("language", lang);
 }
