@@ -59,6 +59,7 @@ ol.publication > li:before {
 .pub-doi,
 .pub-arxiv,
 .pub-download,
+.timeline-doi,
 .timeline-download {
     font: $font-post;
     font-size: 1.1em;
@@ -74,6 +75,8 @@ a.pub-arxiv:hover,
 a.pub-arxiv:focus,
 a.pub-download:hover,
 a.pub-download:focus,
+a.timeline-doi:hover,
+a.timeline-doi:focus,
 a.timeline-download:hover,
 a.timeline-download:focus {
     text-decoration-line: none;

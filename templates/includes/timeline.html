@@ -35,6 +35,9 @@
                         {% if presentation.link %}
                             <a class="timeline-download nowrap" href="{{ presentation.link }}"><i class="fas fa-eye" aria-hidden="true"></i> {% trans %}View{% endtrans %}</a>
                         {% endif %}
+                        {% if presentation.doi %}
+                            <a class="timeline-doi nowrap" href="https://dx.doi.org/{{ presentation.doi }}" rel="nofollow" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ presentation.doi }}</a>
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>
