@@ -85,3 +85,14 @@ msgstr ""
 msgid "View"
 msgstr ""
 
+msgid "Germany"
+msgstr "Allemagne"
+
+msgid "France"
+msgstr "France"
+
+msgid "Italy"
+msgstr "Italie"
+
+msgid "United States"
+msgstr "États Unis"

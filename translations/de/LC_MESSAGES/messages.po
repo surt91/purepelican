@@ -86,3 +86,15 @@ msgstr "Poster"
 #: templates/includes/timeline.html:36
 msgid "View"
 msgstr "Ansehen"
+
+msgid "Germany"
+msgstr "Deutschland"
+
+msgid "France"
+msgstr "Frankreich"
+
+msgid "Italy"
+msgstr "Italien"
+
+msgid "United States"
+msgstr "Vereinigte Staaten"
