@@ -1,3 +1,5 @@
+@import 'functions';
+
 ul.list-posts {
     padding-bottom: 0.4em;
     padding-top: 0.2em;
@@ -8,7 +10,7 @@ ul.list-posts {
 }
 
 ul.list-posts li time {
-    color: $color-subtitle;
+    color: getColor(subtitle);
     display: inline-block;
     font: $font-subtitle;
     width: 7em;

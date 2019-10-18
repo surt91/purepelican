@@ -1,3 +1,5 @@
+@import 'functions';
+
 .publications,
 .timeline {
     margin-bottom: 1.2em;
@@ -13,12 +15,12 @@ ol.publication > li {
 
 ol.publication > li:before {
     font: $font-sectiontitle;
-    color: $color-title;
+    color: getColor(title);
 }
 
 .pub-title {
     font: $font-sectiontitle;
-    color: $color-title;
+    color: getColor(title);
     margin-bottom: 0.2em;
     margin-top: 0;
 }
@@ -26,7 +28,7 @@ ol.publication > li:before {
 .pub-authors,
 .pub-journalref {
     font: $font-post;
-    color: $color-post;
+    color: getColor(post);
     margin-bottom: 0.2em;
     margin-top: 0;
 }
@@ -37,7 +39,7 @@ ol.publication > li:before {
 
 .timeline-title {
     font: $font-post;
-    color: $color-title;
+    color: getColor(title);
     margin-bottom: 0.2em;
     margin-top: 0;
 }
@@ -45,7 +47,7 @@ ol.publication > li:before {
 .timeline-presentation-item {
     font: $font-post;
     font-size: 1em;
-    color: $color-post;
+    color: getColor(post);
     padding-left: 1em;
     margin-bottom: 0.2em;
     margin-top: 0;
@@ -53,7 +55,7 @@ ol.publication > li:before {
 
 .pub-links,
 .timeline-link {
-    color: $color-subtitle;
+    color: getColor(subtitle);
 }
 
 .pub-doi,
@@ -63,8 +65,8 @@ ol.publication > li:before {
 .timeline-download {
     font: $font-post;
     font-size: 1.1em;
-    color: $color-subtitle;
-    border-bottom: 1px dotted $color-subtitle;
+    color: getColor(subtitle);
+    border-bottom: 1px dotted getColor(subtitle);
     margin-bottom: 0.2em;
     margin-top: 0;
 }
@@ -80,5 +82,5 @@ a.timeline-doi:focus,
 a.timeline-download:hover,
 a.timeline-download:focus {
     text-decoration-line: none;
-    border-bottom:: 1px solid $color-subtitle;
+    border-bottom: 1px solid getColor(subtitle);
 }

@@ -1,18 +1,20 @@
+@import 'functions';
+
 .tag {
     font: $font-tag;
     list-style: none;
     display: inline-block;
 
-    background: $color-bg-tag;
+    background: getColor(bg-tag);
     border-radius: 3px;
-    color: $color-tag;
+    color: getColor(tag);
 
     padding: 0.2em 0.3em;
     margin: 0.2em;
 }
 
 .tag a {
-    color: $color-tag;
+    color: getColor(tag);
     text-decoration: none;
     margin: 0.2em 0.2em;
 }
@@ -26,7 +28,7 @@
 }
 
 .category a {
-    color: $color-bg-main;
+    color: getColor(bg-main);
 }
 
 .category-code {
@@ -59,7 +61,7 @@
 }
 
 .language a {
-    color: $color-bg-main;
+    color: getColor(bg-main);
 }
 
 .doi {
@@ -69,5 +71,5 @@
 }
 
 .doi a {
-    color: $color-bg-main;
+    color: getColor(bg-main);
 }

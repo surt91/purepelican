@@ -8,31 +8,67 @@ $font-quote: italic 1em Georgia, 'Cambria', serif;
 $font-superscript: 0.8em;
 $font-code: 1em 'Courier New', Courier, monospace;
 
-$color-post: #333;
-$color-link: #3d92c9;
-$color-title: #333;
-$color-sectiontitle: #444;
-$color-subtitle: #6F6F6F;
-$color-sidebar: #fff;
-$color-brand: #b0cadb;
-$color-code: #383a42;
-$color-tag: $color-post;
-
-$color-bg-sidebar: #3d4f5d;
-$color-bg-main: #fff;
-$color-bg-code: #fafafa;
-$color-bg-tag: #ddd;
-
 $border-bottom: 1px solid #888;
 $border: 1px solid rgba(0, 0, 0, 0.15);
 
 $break-small: 64em;
 $break-smallest: 35.5em;
 
-@import 'social';   // colors for social media links
-@import 'tags';     // colors and style for categories and tags
-@import 'images';   // loads images by first loading a thumbnail
-@import 'light';    // one light syntax highlighting (from atom)
+$colors: (
+    post: #333,
+    link: #3d92c9,
+    title: #333,
+    sectiontitle: #444,
+    subtitle: #6F6F6F,
+    sidebar: #fff,
+    brand: #b0cadb,
+    code: #383a42,
+    tag: #333,
+    border: #3d4f5d,
+
+    bg-sidebar: #3d4f5d,
+    bg-main: #fff,
+    bg-code: #fafafa,
+    bg-tag: #ddd,
+);
+
+$colors-dark: (
+    post: #abb2bf,
+    link: #3d92c9,
+    title: #abb2bf,
+    sectiontitle: #abb2bf,
+    subtitle: #abb2bf,
+    sidebar: #b0cadb,
+    brand: #b0cadb,
+    code: #abb2bf,
+    tag: #abb2bf,
+    border: #3d4f5d,
+
+    bg-sidebar: #3d4f5d,
+    bg-main: #282c34,
+    bg-code: #282c34,
+    bg-tag: #282c34,
+);
+
+:root {
+    @each $name, $color in $colors {
+        --color-#{$name}: #{$color};
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @each $name, $color in $colors-dark {
+            --color-#{$name}: #{$color};
+        }
+    }
+}
+
+@import 'functions';    // function definitions
+@import 'social';       // colors for social media links
+@import 'tags';         // colors and style for categories and tags
+@import 'images';       // loads images by first loading a thumbnail
+@import 'light';        // one light syntax highlighting (from atom)
 
 @import 'lists';
 @import 'post';
@@ -56,6 +92,14 @@ html {
     overflow-y: scroll;
 }
 
+body {
+    background: getColor(bg-main);
+}
+
+h3, h2 {
+    color: getColor(title);
+}
+
 h3 {
     font-weight: 100;
 }
@@ -68,7 +112,7 @@ h3 {
 
 .search-query {
     margin-bottom: 1em;
-    color: $color-post;
+    color: getColor(post);
 }
 
 .center {
@@ -112,8 +156,8 @@ video.not-found-video {
 }
 
 .sidebar {
-    background: $color-bg-sidebar;
-    color: $color-sidebar;
+    background: getColor(bg-sidebar);
+    color: getColor(sidebar);
 
     @media screen and (min-width: $break-small) {
         position: fixed;
@@ -128,7 +172,7 @@ video.not-found-video {
 
 a {
     text-decoration: none;
-    color: $color-link;
+    color: getColor(link);
 }
 
 a:hover,
@@ -149,13 +193,13 @@ a:focus {
 }
 .brand-title a {
     font: $font-brand;
-    color: $color-brand;
+    color: getColor(brand);
     text-decoration: none;
 }
 
 .brand-tagline {
     font-weight: 300;
-    color: $color-brand;
+    color: getColor(brand);
 }
 
 .nav-list {
@@ -171,15 +215,15 @@ a:focus {
 }
 .nav-item a {
     background: transparent;
-    border: 2px solid $color-brand;
-    color: $color-sidebar;
+    border: 2px solid getColor(brand);
+    color: getColor(brand);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-size: 85%;
 }
 .nav-item a:hover,
 .nav-item a:focus {
-    border: 2px solid $color-link;
+    border: 2px solid getColor(link);
     text-decoration: none;
 }
 
@@ -189,7 +233,7 @@ a:focus {
 
 .content-subhead {
     text-transform: uppercase;
-    color: $color-subtitle;
+    color: getColor(subtitle);
     border-bottom: $border-bottom;
     padding: 0.4em 0;
     font-size: 80%;
@@ -208,7 +252,7 @@ a:focus {
 
 .title {
     font: $font-title;
-    color: $color-title;
+    color: getColor(title);
 }
 
 .MathJax_Display {
@@ -232,8 +276,8 @@ code {
     font-family: Courier, monospace;
     padding: 2px 4px;
     /* pygments style */
-    background-color: $color-bg-code;
-    color: $color-code;
+    background-color: getColor(bg-code);
+    color: getColor(code);
     border: $border;
 }
 
