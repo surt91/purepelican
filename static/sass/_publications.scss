@@ -13,6 +13,11 @@ ol.publication > li {
     margin-bottom: 1.8em;
 }
 
+ol.publication > li::marker {
+    font: $font-sectiontitle;
+    color: getColor(title);
+}
+
 ol.publication > li:before {
     font: $font-sectiontitle;
     color: getColor(title);
