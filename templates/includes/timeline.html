@@ -19,7 +19,8 @@
                     {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" rel="noopener" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
                     {{ event.place }}, {{ _(event.country) }}
                 </div>
-                {% for presentation in event.presentations %}
+                {% for id in event.presentations %}
+                    {% set presentation = documents[id] %}
                     <div class="timeline-presentation-item">
                         {% if presentation.type == "thesis" %}
                             <i class="fas fa-book-open fa-fw" aria-hidden="true" title="{% trans %}Thesis{% endtrans %}"></i>
