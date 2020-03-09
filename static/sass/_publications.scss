@@ -37,6 +37,16 @@ ol.publication ::marker {
     font-weight: bold;
 }
 
+.pub-related,
+.pub-supplementary,
+.pub-supp-title {
+    font: $font-post;
+    font-size: 1.1em;
+    color: getColor(subtitle);
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+
 .timeline-title {
     font: $font-post;
     color: getColor(title);

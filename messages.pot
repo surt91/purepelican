@@ -1,21 +1,21 @@
 # Translations template for PROJECT.
-# Copyright (C) 2019 ORGANIZATION
+# Copyright (C) 2020 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-03 18:20+0200\n"
+"POT-Creation-Date: 2020-03-09 22:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: templates/404.html:8
 msgid "This site does not exist."
@@ -44,8 +44,32 @@ msgid "Timeline"
 msgstr ""
 
 #: templates/includes/publications.html:20
-#: templates/includes/publications.html:41 templates/includes/timeline.html:33
+#: templates/includes/publications.html:89 templates/includes/timeline.html:34
 msgid "Download"
+msgstr ""
+
+#: templates/includes/publications.html:39
+msgid "Text"
+msgstr ""
+
+#: templates/includes/publications.html:41
+msgid "Code"
+msgstr ""
+
+#: templates/includes/publications.html:51
+msgid "Related"
+msgstr ""
+
+#: templates/includes/publications.html:62 templates/includes/timeline.html:26
+msgid "Thesis"
+msgstr ""
+
+#: templates/includes/publications.html:64 templates/includes/timeline.html:28
+msgid "Talk"
+msgstr ""
+
+#: templates/includes/publications.html:66 templates/includes/timeline.html:30
+msgid "Poster"
 msgstr ""
 
 #: templates/includes/timeline.html:8
@@ -68,19 +92,7 @@ msgstr ""
 msgid "Work"
 msgstr ""
 
-#: templates/includes/timeline.html:25
-msgid "Thesis"
-msgstr ""
-
-#: templates/includes/timeline.html:27
-msgid "Talk"
-msgstr ""
-
-#: templates/includes/timeline.html:29
-msgid "Poster"
-msgstr ""
-
-#: templates/includes/timeline.html:36
+#: templates/includes/timeline.html:37
 msgid "View"
 msgstr ""
 

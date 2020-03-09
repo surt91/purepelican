@@ -10,11 +10,11 @@
     {% endfor %}
 
     <h2>{% trans %}Publications{% endtrans %}</h2>
-    {{ p.publications(publication_details) }}
+    {{ p.publications(publication_details, DOCUMENTS) }}
 
     <h2>{% trans %}Preprints{% endtrans %}</h2>
     {{ p.preprints(preprint_details, publication_details|length + 1) }}
 
     <h2>{% trans %}Timeline{% endtrans %}</h2>
-    {{ t.timeline(EVENTS) }}
+    {{ t.timeline(EVENTS, DOCUMENTS) }}
 {% endblock %}

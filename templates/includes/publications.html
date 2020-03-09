@@ -1,4 +1,4 @@
-{% macro publications(publications) %}
+{% macro publications(publications, documents) %}
     <div class="publications">
         <ol class="publication">
             {% for publication in publications %}
@@ -27,11 +27,11 @@
                         <div class="pub-supplementary">
                             {% for id in publication.supplementary %}
                                 {% set supp = documents[id] %}
-                                <span class="pub-supp-title">{{supp.title}}</span>
+                                <span class="pub-supp-title">{{ supp.title }}</span>
                                 <a class="pub-download nowrap"
                                     {% if supp.pdf %}
                                         href="/pdf/{{ supp.pdf }}"
-                                    {% else supp.link %}
+                                    {% else %}
                                         href="{{ supp.link }}"
                                     {% endif %}
                                 >
@@ -48,28 +48,26 @@
 
                         {% if publication.related %}
                             <div class="pub-related">
-                                <ul>
-                                    {% for id in publication.related %}
-                                        {% set related = documents[id] %}
-                                        <li>
-                                            <a class="pub-download nowrap"
-                                                {% if related.pdf %}
-                                                    href="/pdf/{{ related.pdf }}"
-                                                {% elif %}
-                                                    href="{{ related.link }}"
-                                                {% endif %}
-                                            >
-                                                {% if presentation.type == "thesis" %}
-                                                    <i class="fas fa-book-open fa-fw" aria-hidden="true" title="{% trans %}Thesis{% endtrans %}"></i>
-                                                {% elif presentation.type == "talk" %}
-                                                    <i class="fas fa-comment fa-fw" aria-hidden="true" title="{% trans %}Talk{% endtrans %}"></i>
-                                                {% elif presentation.type == "poster" %}
-                                                    <i class="fas fa-file fa-fw" aria-hidden="true" title="{% trans %}Poster{% endtrans %}"></i>
-                                                {% endif %}
-                                            </a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
+                                {% trans %}Related{% endtrans %}:
+                                {% for id in publication.related %}
+                                    {% set related = documents[id] %}
+                                    <a class="pub-download nowrap"
+                                        {% if related.pdf %}
+                                            href="/pdf/{{ related.pdf }}"
+                                        {% else%}
+                                            href="{{ related.link }}"
+                                        {% endif %}
+                                    >
+                                        {% if related.type == "thesis" %}
+                                            <i class="fas fa-book-open fa-fw" aria-hidden="true" title="{% trans %}Thesis{% endtrans %}"></i>
+                                        {% elif related.type == "talk" %}
+                                            <i class="fas fa-comment fa-fw" aria-hidden="true" title="{% trans %}Talk{% endtrans %}"></i>
+                                        {% elif related.type == "poster" %}
+                                            <i class="fas fa-file fa-fw" aria-hidden="true" title="{% trans %}Poster{% endtrans %}"></i>
+                                        {% endif %}
+                                        {{ related.short }}
+                                    </a>{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             </div>
                         {% endif %}
                     </div>

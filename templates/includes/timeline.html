@@ -1,4 +1,4 @@
-{% macro timeline(events) %}
+{% macro timeline(events, documents) %}
     <div class="timeline">
         {% for event in events|sort(reverse=True, attribute='date') %}
             <div class="timeline-item" data-date='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}'>
