@@ -13,7 +13,7 @@
     {{ p.publications(publication_details, DOCUMENTS) }}
 
     <h2>{% trans %}Preprints{% endtrans %}</h2>
-    {{ p.preprints(preprint_details, publication_details|length + 1) }}
+    {{ p.preprints(preprint_details, DOCUMENTS, publication_details|length + 1) }}
 
     <h2>{% trans %}Timeline{% endtrans %}</h2>
     {{ t.timeline(EVENTS, DOCUMENTS) }}

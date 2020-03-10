@@ -1,3 +1,35 @@
+{% macro list_related(publication, documents) %}
+    {% if publication.related %}
+        <div class="pub-related">
+            {% trans %}Related{% endtrans %}:
+            {% for id in publication.related %}
+                {% set related = documents[id] %}
+                <a class="pub-download nowrap"
+                    {% if related.pdf %}
+                        href="/pdf/{{ related.pdf }}"
+                    {% else%}
+                        href="{{ related.link }}"
+                    {% endif %}
+                >
+                    <span
+                    {% if related.type == "thesis" %}
+                        title="{% trans %}Thesis{% endtrans %}: {{ related.title }}">
+                        <i class="fas fa-book-open fa-fw" aria-hidden="true" ></i>
+                    {% elif related.type == "talk" %}
+                        title="{% trans %}Talk{% endtrans %}: {{ related.title }}">
+                        <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+                    {% elif related.type == "poster" %}
+                        title="{% trans %}Poster{% endtrans %}: {{ related.title }}">
+                        <i class="fas fa-file fa-fw" aria-hidden="true"></i>
+                    {% endif %}
+                        {{ related.short }}
+                    </span>
+                </a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endmacro %}
+
 {% macro publications(publications, documents) %}
     <div class="publications">
         <ol class="publication">
@@ -46,35 +78,7 @@
                         </div>
                         {% endif %}
 
-                        {% if publication.related %}
-                            <div class="pub-related">
-                                {% trans %}Related{% endtrans %}:
-                                {% for id in publication.related %}
-                                    {% set related = documents[id] %}
-                                    <a class="pub-download nowrap"
-                                        {% if related.pdf %}
-                                            href="/pdf/{{ related.pdf }}"
-                                        {% else%}
-                                            href="{{ related.link }}"
-                                        {% endif %}
-                                    >
-                                        <span
-                                        {% if related.type == "thesis" %}
-                                            title="{% trans %}Thesis{% endtrans %}: {{ related.title }}">
-                                            <i class="fas fa-book-open fa-fw" aria-hidden="true" ></i>
-                                        {% elif related.type == "talk" %}
-                                            title="{% trans %}Talk{% endtrans %}: {{ related.title }}">
-                                            <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-                                        {% elif related.type == "poster" %}
-                                            title="{% trans %}Poster{% endtrans %}: {{ related.title }}">
-                                            <i class="fas fa-file fa-fw" aria-hidden="true"></i>
-                                        {% endif %}
-                                            {{ related.short }}
-                                        </span>
-                                    </a>{% if not loop.last %}, {% endif %}
-                                {% endfor %}
-                            </div>
-                        {% endif %}
+                        {{ list_related(publication, documents) }}
                     </div>
                 </li>
             {% endfor %}
@@ -82,7 +86,7 @@
     </div>
 {% endmacro %}
 
-{% macro preprints(preprints, num=1) %}
+{% macro preprints(preprints, documents, num=1) %}
     <div class="publications">
         <ol class="publication" start="{{ num }}">
             {% for preprint in preprints %}
@@ -94,6 +98,8 @@
                         <a class="pub-download nowrap" href="/pdf/{{ preprint.pdf }}"><i class="fas fa-download" aria-hidden="true"></i> {% trans %}Download{% endtrans %}</a>,
                         <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ preprint.arxiv }}" rel="nofollow" rel="noopener" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i> {{ preprint.arxiv_long }}</a>
                     </div>
+
+                    {{ list_related(preprint, documents) }}
                 </li>
             {% endfor %}
         </ol>
