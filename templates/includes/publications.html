@@ -60,13 +60,13 @@
                                     >
                                         <span
                                         {% if related.type == "thesis" %}
-                                            title="{% trans %}Thesis{% endtrans %}">
+                                            title="{% trans %}Thesis{% endtrans %}: {{ related.title }}">
                                             <i class="fas fa-book-open fa-fw" aria-hidden="true" ></i>
                                         {% elif related.type == "talk" %}
-                                            title="{% trans %}Talk{% endtrans %}">
+                                            title="{% trans %}Talk{% endtrans %}: {{ related.title }}">
                                             <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
                                         {% elif related.type == "poster" %}
-                                            title="{% trans %}Poster{% endtrans %}">
+                                            title="{% trans %}Poster{% endtrans %}: {{ related.title }}">
                                             <i class="fas fa-file fa-fw" aria-hidden="true"></i>
                                         {% endif %}
                                             {{ related.short }}
