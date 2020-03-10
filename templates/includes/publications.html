@@ -58,14 +58,19 @@
                                             href="{{ related.link }}"
                                         {% endif %}
                                     >
+                                        <span
                                         {% if related.type == "thesis" %}
-                                            <i class="fas fa-book-open fa-fw" aria-hidden="true" title="{% trans %}Thesis{% endtrans %}"></i>
+                                            title="{% trans %}Thesis{% endtrans %}">
+                                            <i class="fas fa-book-open fa-fw" aria-hidden="true" ></i>
                                         {% elif related.type == "talk" %}
-                                            <i class="fas fa-comment fa-fw" aria-hidden="true" title="{% trans %}Talk{% endtrans %}"></i>
+                                            title="{% trans %}Talk{% endtrans %}">
+                                            <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
                                         {% elif related.type == "poster" %}
-                                            <i class="fas fa-file fa-fw" aria-hidden="true" title="{% trans %}Poster{% endtrans %}"></i>
+                                            title="{% trans %}Poster{% endtrans %}">
+                                            <i class="fas fa-file fa-fw" aria-hidden="true"></i>
                                         {% endif %}
-                                        {{ related.short }}
+                                            {{ related.short }}
+                                        </span>
                                     </a>{% if not loop.last %}, {% endif %}
                                 {% endfor %}
                             </div>
