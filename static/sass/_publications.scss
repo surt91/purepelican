@@ -39,7 +39,9 @@ ol.publication ::marker {
 
 .pub-related,
 .pub-supplementary,
-.pub-supp-title {
+.pub-supp-title,
+.pub-links,
+.timeline-link {
     font: $font-post;
     font-size: 1.1em;
     color: getColor(subtitle);
@@ -63,22 +65,13 @@ ol.publication ::marker {
     margin-top: 0;
 }
 
-.pub-links,
-.timeline-link {
-    color: getColor(subtitle);
-}
-
 .pub-doi,
 .pub-arxiv,
 .pub-download,
 .timeline-doi,
 .timeline-download {
-    font: $font-post;
-    font-size: 1.1em;
     color: getColor(subtitle);
     border-bottom: 1px dotted getColor(subtitle);
-    margin-bottom: 0.2em;
-    margin-top: 0;
 }
 
 a.pub-doi:hover,
