@@ -57,9 +57,9 @@
 
                         {% if publication.supplementary %}
                         <div class="pub-supplementary">
+                            Supplementary:
                             {% for id in publication.supplementary %}
                                 {% set supp = documents[id] %}
-                                <span class="pub-supp-title">{{ supp.title }}</span>
                                 <a class="pub-download nowrap"
                                     {% if supp.pdf %}
                                         href="/pdf/{{ supp.pdf }}"
@@ -72,6 +72,7 @@
                                 {% elif supp.type == "code" %}
                                     <i class="fas fa-code fa-fw" aria-hidden="true" title="{% trans %}Code{% endtrans %}"></i>
                                 {% endif %}
+                                <span class="pub-supp-title">{{ supp.title }}</span>
                                 </a>{% if not loop.last %}, {% endif %}
                                 <!-- <a class="pub-doi nowrap" href="https://dx.doi.org/{{ supp.doi }}" rel="nofollow" rel="noopener" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ supp.doi }}</a> -->
                             {% endfor %}
