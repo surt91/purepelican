@@ -72,7 +72,7 @@
                                 {% elif supp.type == "code" %}
                                     <i class="fas fa-code fa-fw" aria-hidden="true" title="{% trans %}Code{% endtrans %}"></i>
                                 {% endif %}
-                                </a>
+                                </a>{% if not loop.last %}, {% endif %}
                                 <!-- <a class="pub-doi nowrap" href="https://dx.doi.org/{{ supp.doi }}" rel="nofollow" rel="noopener" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ supp.doi }}</a> -->
                             {% endfor %}
                         </div>
