@@ -25,6 +25,7 @@ $colors: (
     code: #383a42,
     tag: #333,
     border: #3d4f5d,
+    invisibleÖ : #51697b,
 
     bg-sidebar: #3d4f5d,
     bg-main: #fff,
@@ -33,20 +34,21 @@ $colors: (
 );
 
 $colors-dark: (
-    post: #ddd,
+    post: #c0c0c0,
     link: #3d92c9,
-    title: #ddd,
-    sectiontitle: #ddd,
-    subtitle: #ddd,
-    sidebar: #b0cadb,
-    brand: #b0cadb,
-    code: #ddd,
-    tag: #ddd,
-    border: #3d4f5d,
+    title: #c0c0c0,
+    sectiontitle: #c0c0c0,
+    subtitle: #c0c0c0,
+    sidebar: #c0c0c0,
+    brand: #c0c0c0,
+    code: #c0c0c0,
+    tag: #c0c0c0,
+    border: #323232,
+    invisible: #222222,
 
-    bg-sidebar: #3d4f5d,
-    bg-main: #282c34,
-    bg-code: #282c34,
+    bg-sidebar: #323232,
+    bg-main: #121212,
+    bg-code: #121212,
     bg-tag: #3e3e3e,
 );
 
@@ -258,7 +260,7 @@ a:focus {
 }
 
 #last-update {
-    color: #51697b;
+    color: getColor(invisible);
     font-size: 0.7em;
     position: fixed;
     bottom: 0;
