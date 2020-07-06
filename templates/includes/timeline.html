@@ -28,6 +28,10 @@
                             <i class="fas fa-comment fa-fw" aria-hidden="true" title="{% trans %}Talk{% endtrans %}"></i>
                         {% elif presentation.type == "poster" %}
                             <i class="fas fa-file fa-fw" aria-hidden="true" title="{% trans %}Poster{% endtrans %}"></i>
+                        {% elif presentation.type == "video" %}
+                            <a class="nowrap" href="{{ presentation.link }}">
+                                <i class="fab fa-youtube fa-fw" aria-hidden="true" title="{% trans %}Video{% endtrans %}"></i>
+                            </a>
                         {% endif %}
                         <span class="timeline-presentation">{{ presentation.title }},</span>
                         {% if presentation.pdf %}
