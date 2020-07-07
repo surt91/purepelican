@@ -29,7 +29,7 @@
                         {% elif presentation.type == "poster" %}
                             <i class="fas fa-file fa-fw" aria-hidden="true" title="{% trans %}Poster{% endtrans %}"></i>
                         {% elif presentation.type == "video" %}
-                            <a class="nowrap" href="{{ presentation.link }}">
+                            <a class="nowrap link-nohighlight" href="{{ presentation.link }}">
                                 <i class="fab fa-youtube fa-fw" aria-hidden="true" title="{% trans %}Video{% endtrans %}"></i>
                             </a>
                         {% endif %}

@@ -25,7 +25,7 @@ $colors: (
     code: #383a42,
     tag: #333,
     border: #3d4f5d,
-    invisibleÖ : #51697b,
+    invisible: #51697b,
 
     bg-sidebar: #3d4f5d,
     bg-main: #fff,
@@ -182,17 +182,21 @@ a:focus {
     text-decoration: underline;
 }
 
+a.link-nohighlight {
+    text-decoration: none;
+    color: inherit;
+}
+
 .title a {
     text-decoration: none;
 }
+
 
 .brand-title,
 .brand-tagline {
     margin: 0;
 }
-.brand-title {
-    // text-transform: uppercase;
-}
+
 .brand-title a {
     font: $font-brand;
     color: getColor(brand);
