@@ -26,10 +26,9 @@ function totally_serious_function() {
     var img = document.createElement("img");
     img.src = "/theme/fx/happy_cthulhu.png";
     img.className += "cthulhu";
-    img.setAttribute("style", "position: fixed; width: 526px; height: 442px; top: 50%; left: 50%; margin-top: -221px; margin-left: -263px;");
 
     var credits = document.createElement("div");
-    credits.setAttribute("style", "position: fixed; bottom: 10px; right: 10px; background-color: #eee; box-shadow: 7px 7px 5px grey; border-radius: 5px; padding: 3px 10px; font-size: 80%;")
+    credits.className += "cthulhu-credits";
     credits.innerHTML = '<p>"Happy Cthulhu" by <a href="https://kandipatterns.com/patterns/characters/happy-cthulhu-11927">GingerCandE</a></p>'
     credits.innerHTML += '<p>"SuperBluesBros Banana Blitz" by <a href="http://freemusicarchive.org/music/RoccoW/~/SuperBluesBros_Banana_Blitz">RoccoW</a> (CC-BY)</p>'
     credits.innerHTML += '<p>"rythm.js" by <a href="https://github.com/Okazari/Rythm.js">Okazari</a></p>'

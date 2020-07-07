@@ -333,3 +333,24 @@ span.count {
 .nowrap {
     white-space: nowrap;
 }
+
+.cthulhu {
+    position: fixed;
+    width: 526px;
+    height: 442px;
+    top: 50%;
+    left: 50%;
+    margin-top: -221px;
+    margin-left: -263px;
+}
+
+.cthulhu-credits {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #eee;
+    box-shadow: 7px 7px 5px grey;
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-size: 80%;
+}
