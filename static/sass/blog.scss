@@ -134,6 +134,12 @@ video.not-found-video {
     width: 100%
 }
 
+@media (prefers-color-scheme: dark) {
+    video.not-found-video {
+        filter: invert(0.925);
+    }
+}
+
 .fixed-size-400 {
     max-width: 400px;
     width: 100%
