@@ -39,3 +39,10 @@
         ;
     }
 }
+
+ul.timeline-vis-list li {
+    display: inline;
+    color: getColor(subtitle);
+    padding-right: 1.3em;
+    white-space: nowrap;
+}

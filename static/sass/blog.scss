@@ -92,6 +92,8 @@ $colors-dark: (
 // always show scrollbar for consistent width
 html {
     overflow-y: scroll;
+    height: auto;
+    padding-bottom: 95vh;
 }
 
 body {
