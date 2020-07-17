@@ -44,18 +44,14 @@ function init_timeline() {
 
 function show_timeline(category) {
     localStorage.setItem(category, "true");
-    console.log("hide", category);
     for (let item of document.getElementsByClassName(category)) {
-        console.log("show", item);
         item.classList.remove("hidden");
     }
 }
 
 function hide_timeline(category) {
     localStorage.setItem(category, "false");
-    console.log("hide", category);
     for (let item of document.getElementsByClassName(category)) {
-        console.log("hide", item);
         item.classList.add("hidden");
     }
 }
