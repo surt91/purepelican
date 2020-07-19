@@ -92,3 +92,27 @@ msgstr "Italien"
 
 msgid "United States"
 msgstr "Vereinigte Staaten"
+
+msgid "Contracts for research focused jobs."
+msgstr "Wissenschaftliche Berufe."
+
+msgid "Visiting a reseach facility for at least one month."
+msgstr "Besuche von wissenscahftlichen Einrichtungen über mindestens einen Monat."
+
+msgid "Graduation with an academic degree."
+msgstr "Erlangung eines wissenscahftlichen Abschlusses."
+
+msgid "International conferences with parallel sessions."
+msgstr "Internationale Konferenzen mit parallelen Veranstaltungen."
+
+msgid "Small conferences without parallel sessions."
+msgstr "Kleine Konferenzen ohne parallele Veranstaltungen."
+
+msgid "Participant of a summer school."
+msgstr "Teilnahme an einer Sommerakademie."
+
+msgid "Any kind of teaching at an university."
+msgstr "Jegliche universitäre Lehre."
+
+msgid "Prizes and stipends.
+msgstr "Preise und Stipendien."

@@ -4,7 +4,7 @@
         {% for category, info in TIMELINE_CATEGORIES.items() %}
             {% if category in events|map(attribute="type") %}
                 <li>
-                <label>
+                <label title="{{ _(info[2]) }}">
                     <input type="checkbox" class="timeline-checkbox" data-category="{{ category }}">
                     <i class="fas {{ info[1] }} fa-fw" aria-hidden="true" title="{{ _(info[0]) }}"></i>
                     {{ _(info[0]) }}

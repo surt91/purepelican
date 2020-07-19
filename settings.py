@@ -5,14 +5,14 @@ ASSET_BUNDLES = (
 )
 
 TIMELINE_CATEGORIES = {
-    "work": ("Work", "fa-handshake"),
-    "visit": ("Research visit", "fa-handshake"),
-    "graduation": ("Graduation", "fa-graduation-cap"),
-    "conference": ("Conference", "fa-comments"),
-    "workshop": ("Workshop", "fa-comments"),
-    "summerschool": ("Summer school", "fa-chalkboard"),
-    "teaching": ("Teaching", "fa-chalkboard-teacher"),
-    "prize": ("Prize", "fa-trophy")
+    "work": ("Work", "fa-handshake", "Contracts for research focused jobs."),
+    "visit": ("Research visit", "fa-handshake", "Visiting a reseach facility for at least one month."),
+    "graduation": ("Graduation", "fa-graduation-cap", "Graduation with an academic degree."),
+    "conference": ("Conference", "fa-comments", "International conferences with parallel sessions."),
+    "workshop": ("Workshop", "fa-comments", "Small conferences without parallel sessions."),
+    "summerschool": ("Summer school", "fa-chalkboard", "Participant of a summer school."),
+    "teaching": ("Teaching", "fa-chalkboard-teacher", "Any kind of teaching at an university."),
+    "prize": ("Prize", "fa-trophy", "Prizes and stipends.")
 }
 
 TEACHING_TYPES = {

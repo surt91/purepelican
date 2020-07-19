@@ -78,3 +78,27 @@ msgstr ""
 
 msgid "United States"
 msgstr ""
+
+msgid "Contracts for research focused jobs."
+msgstr ""
+
+msgid "Visiting a reseach facility for at least one month."
+msgstr ""
+
+msgid "Graduation with an academic degree."
+msgstr ""
+
+msgid "International conferences with parallel sessions."
+msgstr ""
+
+msgid "Small conferences without parallel sessions."
+msgstr ""
+
+msgid "Participant of a summer school."
+msgstr ""
+
+msgid "Any kind of teaching at an university."
+msgstr ""
+
+msgid "Prizes and stipends.
+msgstr ""
