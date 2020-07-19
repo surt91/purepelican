@@ -47,6 +47,16 @@ function init_timeline() {
             }
         });
     }
+
+    let tl_settings_trigger = document.getElementById("timeline-settings");
+    let tl_settings = document.getElementsByClassName("timeline-vis-list")[0];
+    tl_settings_trigger.addEventListener("click", function() {
+        if (tl_settings.classList.contains("hidden")) {
+            tl_settings.classList.remove("hidden");
+        } else {
+            tl_settings.classList.add("hidden");
+        }
+    });
 }
 
 function show_timeline(category) {

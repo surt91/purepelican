@@ -1,6 +1,9 @@
+{% macro settings() %}
+    <i id="timeline-settings" class="fas fa-cog fa-fw" aria-hidden="true" title="{% trans %}Settings{% endtrans %}"></i>
+{% endmacro %}
 
 {% macro timeline(events, documents) %}
-    <ul class="timeline-vis-list">
+    <ul class="timeline-vis-list hidden">
         {% for category, info in TIMELINE_CATEGORIES.items() %}
             {% if category in events|map(attribute="type") %}
                 <li>

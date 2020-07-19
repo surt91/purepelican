@@ -15,6 +15,6 @@
     <h2>{% trans %}Preprints{% endtrans %}</h2>
     {{ p.preprints(preprint_details, DOCUMENTS, publication_details|length + 1) }}
 
-    <h2>{% trans %}Timeline{% endtrans %}</h2>
+    <h2>{% trans %}Timeline{% endtrans %}{{ t.settings() }}</h2>
     {{ t.timeline(EVENTS, DOCUMENTS) }}
 {% endblock %}
