@@ -1,17 +1,18 @@
-const categories = ["work", "visit", "graduation", "conference", "workshop", "summerschool"]
 const cat_defaults = {
     work: "true",
     visit: "true",
     graduation: "true",
     conference: "true",
     workshop: "false",
-    summerschool: "false"
-}
+    summerschool: "false",
+    teaching: "false",
+    prize: "false"
+};
 
 document.addEventListener("DOMContentLoaded", init_timeline);
 
 function init_timeline() {
-    for (let cat of categories) {
+    for (let cat of Object.keys(cat_defaults)) {
         let visibility = localStorage.getItem(cat);
         if (visibility === null) {
             // apparently undefined, take a default value
@@ -21,11 +22,17 @@ function init_timeline() {
 
         if (visibility === "true") {
             // remove class hidden
-            document.querySelector('[data-category="' + cat + '"]').checked = true;
+            let checkbox = document.querySelector('[data-category="' + cat + '"]');
+            if (!(checkbox === null)) {
+                checkbox.checked = true;
+            }
             show_timeline(cat);
-        } else if (visibility === "false") {
-            // append class hidden
-            document.querySelector('[data-category="' + cat + '"]').checked = false;
+        } else {
+            // append class hidden (also for categories, which are unspecified)
+            let checkbox = document.querySelector('[data-category="' + cat + '"]');
+            if (!(checkbox === null)) {
+                checkbox.checked = false;
+            }
             hide_timeline(cat);
         }
     }

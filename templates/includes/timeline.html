@@ -1,48 +1,17 @@
 
 {% macro timeline(events, documents) %}
     <ul class="timeline-vis-list">
-        <li>
-        <label>
-            <input type="checkbox" class="timeline-checkbox" data-category="work">
-            <i class="fas fa-handshake fa-fw" aria-hidden="true" title="{% trans %}Work{% endtrans %}"></i>
-            {% trans %}Work{% endtrans %}
-        </label>
-        </li>
-        <li>
-        <label>
-            <input type="checkbox" class="timeline-checkbox" data-category="visit">
-            <i class="fas fa-handshake fa-fw" aria-hidden="true" title="{% trans %}Research visit{% endtrans %}"></i>
-            {% trans %}Research visit{% endtrans %}
-        </label>
-        </li>
-        <li>
-        <label>
-            <input type="checkbox" class="timeline-checkbox" data-category="graduation">
-            <i class="fas fa-graduation-cap fa-fw" aria-hidden="true" title="{% trans %}Graduation{% endtrans %}"></i>
-            {% trans %}Graduation{% endtrans %}
-        </label>
-        </li>
-        <li>
-        <label>
-            <input type="checkbox" class="timeline-checkbox" data-category="conference">
-            <i class="fas fa-comments fa-fw" aria-hidden="true" title="{% trans %}Conference{% endtrans %}"></i>
-            {% trans %}Conference{% endtrans %}
-        </label>
-        </li>
-        <li>
-        <label>
-            <input type="checkbox" class="timeline-checkbox" data-category="workshop">
-            <i class="fas fa-comments fa-fw" aria-hidden="true" title="{% trans %}Workshop{% endtrans %}"></i>
-            {% trans %}Workshop{% endtrans %}
-        </label>
-        </li>
-        <li>
-        <label>
-            <input type="checkbox" class="timeline-checkbox" data-category="summerschool">
-            <i class="fas fa-chalkboard-teacher fa-fw" aria-hidden="true" title="{% trans %}Summer school{% endtrans %}"></i>
-            {% trans %}Summer school{% endtrans %}
-        </label>
-        </li>
+        {% for category, info in TIMELINE_CATEGORIES.items() %}
+            {% if category in events|map(attribute="type") %}
+                <li>
+                <label>
+                    <input type="checkbox" class="timeline-checkbox" data-category="{{ category }}">
+                    <i class="fas {{ info[1] }} fa-fw" aria-hidden="true" title="{{ _(info[0]) }}"></i>
+                    {{ _(info[0]) }}
+                </label>
+                </li>
+            {% endif %}
+        {% endfor %}
     </ul>
 
     <div class="timeline">
@@ -50,19 +19,7 @@
             <div class="timeline-item {{ event.type }}" data-date='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}'>
                 <div class="timeline-title">
                     <span class="timeline-symbol">
-                        {% if event.type == "graduation" %}
-                            <i class="fas fa-graduation-cap fa-fw" aria-hidden="true" title="{% trans %}Graduation{% endtrans %}"></i>
-                        {% elif event.type == "conference" %}
-                            <i class="fas fa-comments fa-fw" aria-hidden="true" title="{% trans %}Conference{% endtrans %}"></i>
-                        {% elif event.type == "workshop" %}
-                            <i class="fas fa-comments fa-fw" aria-hidden="true" title="{% trans %}Workshop{% endtrans %}"></i>
-                        {% elif event.type == "summerschool" %}
-                            <i class="fas fa-chalkboard-teacher fa-fw" aria-hidden="true" title="{% trans %}Summer school{% endtrans %}"></i>
-                        {% elif event.type == "visit" %}
-                            <i class="fas fa-handshake fa-fw" aria-hidden="true" title="{% trans %}Research visit{% endtrans %}"></i>
-                        {% elif event.type == "work" %}
-                            <i class="fas fa-handshake fa-fw" aria-hidden="true" title="{% trans %}Work{% endtrans %}"></i>
-                        {% endif %}
+                        <i class="fas {{ TIMELINE_CATEGORIES[event.type][1] }} fa-fw" aria-hidden="true" title="{{ _(TIMELINE_CATEGORIES[event.type][0]) }}"></i>
                     </span>
                     {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" rel="noopener" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
                     {{ event.place }}, {{ _(event.country) }}
