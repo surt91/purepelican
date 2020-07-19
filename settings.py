@@ -15,5 +15,12 @@ TIMELINE_CATEGORIES = {
     "prize": ("Prize", "fa-trophy")
 }
 
+TEACHING_TYPES = {
+    "labcourse": "Lab course",
+    "tutorial": "Tutorial",
+    "guestlecture": "Guest lecture",
+    "lecture": "Lecture",
+}
+
 from datetime import datetime
 NOW = datetime.now()

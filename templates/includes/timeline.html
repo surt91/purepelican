@@ -21,6 +21,9 @@
                     <span class="timeline-symbol">
                         <i class="fas {{ TIMELINE_CATEGORIES[event.type][1] }} fa-fw" aria-hidden="true" title="{{ _(TIMELINE_CATEGORIES[event.type][0]) }}"></i>
                     </span>
+                    {% if event.teaching %}
+                    {{ _(TEACHING_TYPES[event.teaching]) }}:
+                    {% endif %}
                     {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" rel="noopener" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
                     {{ event.place }}, {{ _(event.country) }}
                 </div>
