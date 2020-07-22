@@ -35,8 +35,8 @@
 
 {% macro publications(publications, documents) %}
     <div class="publications">
-        <ol class="publication">
-            {% for publication in publications %}
+        <ol class="publication" reversed>
+            {% for publication in publications|reverse %}
                 <li>
                     <div class="pub-container">
                         <div class="pub-title">{{ publication.title }}</div>
@@ -92,8 +92,8 @@
 
 {% macro preprints(preprints, documents, num=1) %}
     <div class="publications">
-        <ol class="publication" start="{{ num }}">
-            {% for preprint in preprints %}
+        <ol class="publication" start="{{ num + preprints|length - 1 }}" reversed>
+            {% for preprint in preprints|reverse %}
                 <li>
                     <div class="pub-title">{{ preprint.title }}</div>
                     <div class="pub-authors">{{ preprint.authors }}</div>
