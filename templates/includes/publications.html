@@ -8,7 +8,7 @@
                     {% if related.pdf %}
                         href="/pdf/{{ related.pdf }}"
                     {% else%}
-                        href="{{ related.link }}"
+                        href="{{ related.link }}"  rel="nofollow" rel="noopener" target="_blank"
                     {% endif %}
                 >
                     <span
@@ -67,7 +67,7 @@
                                     {% if supp.pdf %}
                                         href="/pdf/{{ supp.pdf }}"
                                     {% else %}
-                                        href="{{ supp.link }}"
+                                        href="{{ supp.link }}" rel="nofollow" rel="noopener" target="_blank"
                                     {% endif %}
                                 >
                                 {% if supp.type == "text" %}
