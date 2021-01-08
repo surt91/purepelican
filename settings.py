@@ -11,7 +11,7 @@ TIMELINE_CATEGORIES = {
     "conference": ("Conference", "fa-comments", "International conferences with parallel sessions."),
     "workshop": ("Workshop", "fa-comments", "Small conferences without parallel sessions."),
     "summerschool": ("Summer school", "fa-chalkboard", "Participant of a summer school."),
-    "teaching": ("Teaching", "fa-chalkboard-teacher", "Any kind of teaching at an university."),
+    "teaching": ("Teaching", "fa-chalkboard-teacher", "Any kind of teaching at a university."),
     "prize": ("Prize", "fa-trophy", "Prizes and stipends.")
 }
 
@@ -20,6 +20,8 @@ TEACHING_TYPES = {
     "tutorial": "Tutorial",
     "guestlecture": "Guest lecture",
     "lecture": "Lecture",
+    "supervision_bachelor": "Co-supervision Bachelor thesis",
+    "supervision_master": "Co-supervision Master thesis",
 }
 
 from datetime import datetime

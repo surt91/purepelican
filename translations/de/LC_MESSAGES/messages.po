@@ -111,8 +111,14 @@ msgstr "Kleine Konferenzen ohne parallele Veranstaltungen."
 msgid "Participant of a summer school."
 msgstr "Teilnahme an einer Sommerakademie."
 
-msgid "Any kind of teaching at an university."
+msgid "Any kind of teaching at a university."
 msgstr "Jegliche universitäre Lehre."
 
-msgid "Prizes and stipends.
+msgid "Prizes and stipends."
 msgstr "Preise und Stipendien."
+
+msgid "Co-supervision Bachelor thesis."
+msgstr "Co-Betreuung eines Bachelor-Studenten."
+
+msgid "Co-supervision Master thesis"
+msgstr "Co-Betreuung eines Master-Studenten."
