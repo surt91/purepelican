@@ -19,7 +19,7 @@
 
     <div class="timeline">
         {% for event in events|sort(reverse=True, attribute='date') %}
-            <div class="timeline-item {{ event.type }}" data-date='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}'>
+            <div class="timeline-item {{ event.type }}" data-date='{{ event.date.strftime(DATE_FORMATS[DEFAULT_LANG]) }}{% if "date_end" in event and event.date != event.date_end %} &ndash; {{ event.date_end.strftime(DATE_FORMATS[DEFAULT_LANG]) }}{% endif %}'>
                 <div class="timeline-title">
                     <span class="timeline-symbol">
                         <i class="fas {{ TIMELINE_CATEGORIES[event.type][1] }} fa-fw" aria-hidden="true" title="{{ _(TIMELINE_CATEGORIES[event.type][0]) }}"></i>
