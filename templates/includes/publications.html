@@ -40,7 +40,7 @@
                 <li>
                     <div class="pub-container">
                         <div class="pub-title">{{ publication.title }}</div>
-                        <div class="pub-authors">{{ publication.authors }}</div>
+                        <div class="pub-authors">{{ publication.authors }} {% if publication.alphabetical %}<i class="fas fa-sort-alpha-up" title="authors ordered alphabetically"></i>{% endif %}</div>
                         <div class="pub-journalref">
                             <span class="pub-journal">{{ publication.journal }}</span>
                             <span class="pub-volume">{{ publication.volume }},</span>
