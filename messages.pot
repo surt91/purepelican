@@ -100,5 +100,8 @@ msgstr ""
 msgid "Any kind of teaching at an university."
 msgstr ""
 
-msgid "Prizes and stipends.
+msgid "Prizes and stipends."
+msgstr ""
+
+msgid "authors ordered alphabetically"
 msgstr ""

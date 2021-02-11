@@ -41,12 +41,25 @@ ol.publication ::marker {
 .pub-supplementary,
 .pub-supp-title,
 .pub-links,
+.pub-bonus,
 .timeline-link {
     font: $font-post;
     font-size: 1.1em;
     color: getColor(subtitle);
     margin-bottom: 0.2em;
     margin-top: 0;
+}
+
+.pub-bonus {
+    display: inline-block;
+
+    font-size: 0.9em;
+    background: getColor(bg-tag);
+    border-radius: 3px;
+    color: getColor(tag);
+
+    padding: 0.2em 0.1em 0.1em 0.1em;
+    margin: 0.0em;
 }
 
 .timeline-title {
