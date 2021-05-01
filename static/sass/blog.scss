@@ -292,6 +292,10 @@ pre {
     border: $border;
 }
 
+.highlight pre {
+    overflow: auto;
+}
+
 .post-navigation {
     border-top: $border-bottom;
 }
