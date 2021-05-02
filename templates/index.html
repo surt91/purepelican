@@ -12,14 +12,14 @@
 
     {# show the pinned post on the first page of the index #}
     {% if PINNED_POST and articles_page.number == 1 and page_name == "index" %}
-        <h3 class="post-header">{% trans %}Vorgeschlagener Eintrag{% endtrans %}</h3>
-        <div class="post-pinned">
-            {% for article in articles %}
-                {% if article.slug == PINNED_POST %}
+        {% for article in articles %}
+            {% if article.slug == PINNED_POST %}
+                <h3 class="post-header">{% trans %}Vorgeschlagener Eintrag{% endtrans %}</h3>
+                <div class="post-pinned">
                     {{ p.post(article) }}
-                {% endif %}
-            {% endfor %}
-        </div>
+                </div>
+            {% endif %}
+        {% endfor %}
 
         {# if there is no pinned post, we do not have to differentiate
             the other posts #}
