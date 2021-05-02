@@ -2,11 +2,11 @@ $font-brand: 1.5em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 $font-title: bold 2.2em 'Helvetica Neue', Helvetica, sans-serif;
 $font-sectiontitle: bold 1.31em 'Helvetica Neue', Helvetica, sans-serif;
 $font-subtitle: 0.9em 'Helvetica Neue', Helvetica, sans-serif;
-$font-post: 1.2em Georgia, 'Cambria', serif;
-$font-tag: 1em 'Helvetica Neue',Helvetica, sans-serif;
-$font-quote: italic 1em Georgia, 'Cambria', serif;
+$font-post: 1.4em 'Vollkorn', serif;
+$font-tag: 1em 'Helvetica Neue', Helvetica, sans-serif;
+$font-quote: italic 1.2em 'Vollkorn', serif;
 $font-superscript: 0.8em;
-$font-code: 'Fira Code', monospace;
+$font-code: 0.9em 'Fira Code', monospace;
 
 $border-bottom: 1px solid #888;
 $border: 1px solid rgba(0, 0, 0, 0.15);
@@ -71,6 +71,7 @@ $colors-dark: (
 @import 'tags';         // colors and style for categories and tags
 @import 'images';       // loads images by first loading a thumbnail
 @import 'fira';         // Fira Code font
+@import 'vollkorn';     // Vollkorn font
 @import 'highlight';    // one light/dark syntax highlighting (from atom)
 
 @import 'lists';
@@ -279,13 +280,13 @@ a:focus {
 }
 
 p code {
-    font-family: $font-code;
+    font: $font-code;
 	background: #282c34;
 	padding: 5px;
 }
 
 pre {
-    font-family: $font-code;
+    font: $font-code;
     padding: 9.5px;
     border: $border;
     overflow: auto;
