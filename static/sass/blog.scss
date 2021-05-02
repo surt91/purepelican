@@ -41,14 +41,14 @@ $colors-dark: (
     subtitle: #c0c0c0,
     sidebar: #c0c0c0,
     brand: #c0c0c0,
-    code: #c0c0c0,
+    code: #abb2bf,
     tag: #c0c0c0,
     border: #323232,
     invisible: #222222,
 
     bg-sidebar: #323232,
     bg-main: #121212,
-    bg-code: #121212,
+    bg-code: #282c34,
     bg-tag: #3e3e3e,
 );
 
@@ -70,7 +70,7 @@ $colors-dark: (
 @import 'social';       // colors for social media links
 @import 'tags';         // colors and style for categories and tags
 @import 'images';       // loads images by first loading a thumbnail
-@import 'light';        // one light syntax highlighting (from atom)
+@import 'highlight';    // one light/dark syntax highlighting (from atom)
 
 @import 'lists';
 @import 'post';
@@ -277,13 +277,9 @@ a:focus {
     }
 }
 
-code {
-    font-family: Courier, monospace;
-    padding: 2px 4px;
-    /* pygments style */
-    background-color: getColor(bg-code);
-    color: getColor(code);
-    border: $border;
+p code {
+	background: #282c34;
+	padding: 5px;
 }
 
 pre {
