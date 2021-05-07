@@ -281,11 +281,11 @@ a:focus {
 
 p code {
     font: $font-code;
-	background: #282c34;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-top: 2px;
-	padding-bottom: 2px;
+    background: getColor(bg-code);
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 pre {
