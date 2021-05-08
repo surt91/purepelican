@@ -53,9 +53,6 @@
 
 
     {% block head_links %}
-        <!-- use cdn, because many clients will have it already cached -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
         {% assets filters="cssmin", output="css/main.css",
             "css/pure-min.css",
             "css/grids-responsive-min.css",
@@ -64,6 +61,13 @@
             <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}">
         {% endassets %}
         <link rel="stylesheet" type="text/css" href="/theme/css/blog.css">
+
+        <!-- use cdn, because many clients will have it already cached -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <!-- Also preload the other fonts early -->
+        <link rel="preload" href="/theme/woff2/Vollkorn-Regular.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="/theme/woff2/FiraCode-Regular.woff2" as="font" crossorigin="anonymous">
     {% endblock head_links %}
 
     {% block feed_links %}
