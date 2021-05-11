@@ -120,9 +120,9 @@
             </div>
 
             <div class="container">
-                <form class="pure-form" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                <form class="pure-form" action="{{ SITEURL }}/search.html">
                     <fieldset>
-                        <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input" aria-label="Suche">
+                        <input type="text" class="search-query" placeholder="{% trans %}Suche{% endtrans %}" name="q" id="tipue_search_input" aria-label="{% trans %}Suche{% endtrans %}">
                     </fieldset>
                 </form>
             </div>

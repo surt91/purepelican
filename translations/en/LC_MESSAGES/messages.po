@@ -35,6 +35,9 @@ msgstr "Apparently this site does not exist. Maybe a search will help?"
 msgid "Archiv"
 msgstr "Archive"
 
+msgid "Suche"
+msgstr "Search"
+
 #: templates/archives.html:8
 msgid "Vollständiges Archiv von"
 msgstr "Complete Archive of"
