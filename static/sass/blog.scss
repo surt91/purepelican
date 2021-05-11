@@ -70,6 +70,7 @@ $colors-dark: (
 @import 'social';       // colors for social media links
 @import 'tags';         // colors and style for categories and tags
 @import 'images';       // loads images by first loading a thumbnail
+@import 'tipuesearch';  // styling for the search
 @import 'fira';         // Fira Code font
 @import 'vollkorn';     // Vollkorn font
 @import 'highlight';    // one light/dark syntax highlighting (from atom)

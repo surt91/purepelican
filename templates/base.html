@@ -55,8 +55,7 @@
     {% block head_links %}
         {% assets filters="cssmin", output="css/main.css",
             "css/pure-min.css",
-            "css/grids-responsive-min.css",
-            "tipuesearch/tipuesearch.css"
+            "css/grids-responsive-min.css"
         %}
             <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}">
         {% endassets %}
