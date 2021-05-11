@@ -15,8 +15,14 @@
 
     <script type="text/javascript" src="tipuesearch_content.js"></script>
 
+    {% if DEFAULT_LANG == "en" %}
+        <script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set_en.js"></script>
+    {% else %}
+        <script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set.js"></script>
+    {% endif %}
+
+
     {% assets filters="rjsmin", output="tipuesearch/tipuesearch.min.js",
-            "tipuesearch/tipuesearch_set.js",
             "tipuesearch/tipuesearch.js"
     %}
         <script src="/{{ ASSET_URL }}"></script>
