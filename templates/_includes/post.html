@@ -2,7 +2,7 @@
     <article class="post">
         <header>
             <h2 class="post-title">
-                <a href="/{{ article.url }}"> {{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
+                <a href="{{ SITEURL }}/{{ article.url }}"> {{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
             </h2>
 
             <div class="post-meta">
@@ -22,7 +22,7 @@
 
                 {% if article.category|trim|count > 0 %}
                 <span class="category category-{{ article.category.slug }}">
-                    <a href="/categories.html#{{ article.category.slug }}-ref">{{ article.category }}</a>
+                    <a href="{{ SITEURL }}/categories.html#{{ article.category.slug }}-ref">{{ article.category }}</a>
                 </span>
                 {% endif %}
 
@@ -30,7 +30,7 @@
                 <span class="tags-in-article">
                     {% for tag in article.tags|sort %}
                         <span class="tag">
-                            <a href="/tags.html#{{ tag.slug }}-ref">
+                            <a href="{{ SITEURL }}/tags.html#{{ tag.slug }}-ref">
                                 {{- tag -}}
                             </a>
                         </span>
