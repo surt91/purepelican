@@ -342,6 +342,10 @@ span.count {
     white-space: nowrap;
 }
 
+.error-detail {
+    color: getColor(post);
+}
+
 .cthulhu {
     position: fixed;
     width: 526px;

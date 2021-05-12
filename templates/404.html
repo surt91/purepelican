@@ -11,11 +11,13 @@
 {% block content %}
     <h2 class="title">{% trans %}Seite nicht gefunden{% endtrans %}</h2>
 
+    <p class="error-detail">
     {% trans %}Anscheinend existiert diese Seite nicht. Vielleicht hilft Ihnen die Suche?{% endtrans %}
+    </p>
     <div class="input-append">
-        <form class="pure-form" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+        <form class="pure-form" action="{{ SITEURL }}/search.html">
             <fieldset>
-                <input type="text" class="search-query" placeholder="Suche" name="q" id="tipue_search_input_404">
+                <input type="text" class="search-query" placeholder="{% trans %}Suche{% endtrans %}" name="q" id="tipue_search_input_404" aria-label="{% trans %}Suche{% endtrans %}>
             </fieldset>
         </form>
     </div>
