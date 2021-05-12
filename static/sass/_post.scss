@@ -48,9 +48,9 @@
 .post-content blockquote:before {
     color: getColor(subtitle);
     content: '\f10d';
-    font: 18px FontAwesome;
+    font: 18px "Font Awesome 5 Free";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 900;
     margin-left: -2em;
     text-decoration: inherit;
     position:absolute;
