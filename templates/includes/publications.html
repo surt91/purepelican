@@ -24,6 +24,9 @@
                     {% elif related.type == "video" %}
                         title="{% trans %}Video{% endtrans %}: {{ related.title }}">
                         <i class="fab fa-youtube fa-fw" aria-hidden="true"></i>
+                    {% elif related.type == "data" %}
+                        title="{% trans %}Video{% endtrans %}: {{ related.title }}">
+                        <i class="fas fa-database fa-fw" aria-hidden="true"></i>
                     {% endif %}
                         {{ related.short }}
                     </span>
