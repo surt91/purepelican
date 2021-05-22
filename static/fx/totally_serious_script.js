@@ -1,3 +1,4 @@
+console.log("Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn")
 var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 var pos = 0;
 document.addEventListener('keydown', function(e) {
