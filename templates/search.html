@@ -9,39 +9,34 @@
 {%- endblock head_description %}
 
 {% block script %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-            crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="tipuesearch_content.js"></script>
 
     {% if DEFAULT_LANG == "en" %}
-        <script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set_en.js"></script>
+        <script type="text/javascript" src="/theme/js/trans_en.js"></script>
     {% else %}
-        <script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set.js"></script>
+        <script type="text/javascript" src="/theme/js/trans_de.js"></script>
     {% endif %}
 
-
-    {% assets filters="rjsmin", output="tipuesearch/tipuesearch.min.js",
-            "tipuesearch/tipuesearch.js"
+    {% assets filters="rjsmin", output="js/search.min.js",
+            "js/lunr.js",
+            "js/lunr.stemmer.support.js",
+            "js/lunr.multi.js",
+            "js/lunr.de.js",
+            "js/lunr-search-result.js"
     %}
         <script src="/{{ ASSET_URL }}"></script>
     {% endassets %}
-
-    <script>
-        $(document).ready(function() {
-            $('#tipue_search_input').tipuesearch({
-                'showRelated': false,
-            });
-        });
-    </script>
 {% endblock script %}
 
 {% block content %}
 <article>
     <div class="pure-u-md-3-4">
-        <div id="tipue_search_content">
-            <div id="tipue_search_loading"></div>
+        <header id="lunr-search-result-heading" class="page-header">
+        </header>
+    </div>
+
+    <div class="pure-u-md-3-4">
+        <div id="lunr-search-result" >
         </div>
     </div>
 </article>

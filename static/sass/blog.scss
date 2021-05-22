@@ -70,7 +70,7 @@ $colors-dark: (
 @import 'social';       // colors for social media links
 @import 'tags';         // colors and style for categories and tags
 @import 'images';       // loads images by first loading a thumbnail
-@import 'tipuesearch';  // styling for the search
+@import 'lunr';         // styling for the search
 @import 'fira';         // Fira Code font
 @import 'vollkorn';     // Vollkorn font
 @import 'highlight';    // one light/dark syntax highlighting (from atom)
@@ -108,10 +108,34 @@ h3 {
 }
 
 #tipue_search_input {
-    color: getColor(post);
+    color: 666;
     display: inline;
     width: 100%;
     max-width: 275px;
+}
+
+.lunr-search-result-item {
+    font: $font-post;
+    color: getColor(post);
+    margin-bottom: 3em;
+}
+
+.lunr-search-result-item > h4,
+.lunr-result-fail {
+    font: $font-subtitle;
+    font-size: 1.3em;
+    color: getColor(post);
+}
+
+.lunr-search-term {
+    font: $font-quote;
+    font-size: 1.3em;
+    color: getColor(post);
+}
+
+#lunr-search-result-heading {
+    font: $font-sectiontitle;
+    color: getColor(title);
 }
 
 .search-query {
