@@ -6,7 +6,7 @@ $font-post: 1.2em Georgia, 'Cambria', serif;
 $font-tag: 1em 'Helvetica Neue',Helvetica, sans-serif;
 $font-quote: italic 1em Georgia, 'Cambria', serif;
 $font-superscript: 0.8em;
-$font-code: 1em 'Courier New', Courier, monospace;
+$font-code: 'Fira Code', monospace;
 
 $border-bottom: 1px solid #888;
 $border: 1px solid rgba(0, 0, 0, 0.15);
@@ -70,6 +70,7 @@ $colors-dark: (
 @import 'social';       // colors for social media links
 @import 'tags';         // colors and style for categories and tags
 @import 'images';       // loads images by first loading a thumbnail
+@import 'fira';         // Fira Code font
 @import 'highlight';    // one light/dark syntax highlighting (from atom)
 
 @import 'lists';
@@ -286,17 +287,15 @@ a.link-nohighlight {
 }
 
 p code {
+    font-family: $font-code;
 	background: #282c34;
 	padding: 5px;
 }
 
 pre {
-    font-family: Courier, monospace;
+    font-family: $font-code;
     padding: 9.5px;
     border: $border;
-}
-
-.highlight pre {
     overflow: auto;
 }
 
