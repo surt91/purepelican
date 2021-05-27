@@ -1,13 +1,13 @@
 $font-brand: 1.5em "Fira Code", monospace;
 $font-title: bold 2.2em "Fira Sans", sans-serif;
 $font-sectiontitle: bold 1.31em "Fira Sans", sans-serif;
-$font-subtitle: 0.9em "Fira Sans", sans-serif;
-$font-subtitle-mono: 0.9em "Fira Code", monospace;
+$font-subtitle: 1em "Fira Sans", sans-serif;
+$font-subtitle-mono: 1em "Fira Code", monospace;
 $font-post: 1.2em "Merriweather", serif;
 $font-tag: 1em "Fira Sans", sans-serif;
 $font-quote: italic 1.1em "Merriweather", serif;
 $font-superscript: 0.8em;
-$font-code: 0.9em "Fira Code", monospace;
+$font-code: 1em "Fira Code", monospace;
 
 $border-bottom: 1px solid #888;
 $border: 1px solid rgba(0, 0, 0, 0.15);
@@ -249,7 +249,7 @@ a:focus {
     border: 2px solid getColor(brand);
     color: getColor(brand);
     font: $font-subtitle;
-    letter-spacing: 0.05em;
+    font-weight: 700;
 }
 .nav-item a:hover,
 .nav-item a:focus {
