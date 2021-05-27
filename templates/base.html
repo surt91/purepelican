@@ -63,6 +63,11 @@
         %}
             <link rel="stylesheet" type="text/css" href="/{{ ASSET_URL }}" />
         {% endassets %}
+
+        <!-- Also preload the other fonts early -->
+        <link rel="preload" href="/theme/woff2/vollkorn-regular.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="/theme/woff2/vollkorn-italic.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="/theme/woff2/firacode-regular.woff2" as="font" crossorigin="anonymous">
     {% endblock head_links %}
 
     {% block feed_links %}
