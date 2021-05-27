@@ -319,12 +319,16 @@ pre {
 }
 
 .post-navigation {
+    color: getColor(subtitle);
+    font: $font-subtitle;
     border-top: $border-bottom;
 }
+
 .separatordot {
     padding-left: 1em;
     padding-right: 1em;
 }
+
 .pagination {
     width: 90%;
     margin: 1em auto;
