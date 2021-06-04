@@ -27,7 +27,7 @@
                     {% if event.teaching %}
                     {{ _(TEACHING_TYPES[event.teaching]) }}:
                     {% endif %}
-                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow" rel="noopener" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
+                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow noopener" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
                     {{ event.place }}, {{ _(event.country) }}
                 </div>
                 {% for id in event.presentations %}
@@ -40,7 +40,7 @@
                         {% elif presentation.type == "poster" %}
                             <i class="fas fa-file fa-fw" aria-hidden="true" title="{% trans %}Poster{% endtrans %}"></i>
                         {% elif presentation.type == "video" %}
-                            <a class="nowrap link-nohighlight" href="{{ presentation.link }}"  rel="nofollow" rel="noopener" target="_blank">
+                            <a class="nowrap link-nohighlight" href="{{ presentation.link }}"  rel="nofollow noopener" target="_blank">
                                 <i class="fab fa-youtube fa-fw" aria-hidden="true" title="{% trans %}Video{% endtrans %}"></i>
                             </a>
                         {% endif %}
@@ -49,10 +49,10 @@
                             <a class="timeline-download timeline-link nowrap" href="/pdf/{{ presentation.pdf }}"><i class="fas fa-download" aria-hidden="true"></i> {% trans %}Download{% endtrans %}</a>
                         {% endif %}
                         {% if presentation.link %}
-                            <a class="timeline-download timeline-link nowrap" href="{{ presentation.link }}" rel="nofollow" rel="noopener" target="_blank"><i class="fas fa-eye" aria-hidden="true"></i> {% trans %}View{% endtrans %}</a>
+                            <a class="timeline-download timeline-link nowrap" href="{{ presentation.link }}" rel="nofollow noopener" target="_blank"><i class="fas fa-eye" aria-hidden="true"></i> {% trans %}View{% endtrans %}</a>
                         {% endif %}
                         {% if presentation.doi %}
-                            <a class="timeline-doi timeline-link nowrap" href="https://dx.doi.org/{{ presentation.doi }}" rel="nofollow" rel="noopener" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ presentation.doi }}</a>
+                            <a class="timeline-doi timeline-link nowrap" href="https://dx.doi.org/{{ presentation.doi }}" rel="nofollow noopener" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ presentation.doi }}</a>
                         {% endif %}
                     </div>
                 {% endfor %}

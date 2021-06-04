@@ -8,7 +8,7 @@
                     {% if related.pdf %}
                         href="/pdf/{{ related.pdf }}"
                     {% else%}
-                        href="{{ related.link }}"  rel="nofollow" rel="noopener" target="_blank"
+                        href="{{ related.link }}"  rel="nofollow noopener" target="_blank"
                     {% endif %}
                 >
                     <span
@@ -57,8 +57,8 @@
                                 <!-- {{ publication.comment }} -->
                             {% endif %}
                             <a class="pub-download nowrap" href="/pdf/{{ publication.pdf }}"><i class="fas fa-download" aria-hidden="true"></i> {% trans %}Download{% endtrans %}</a>,
-                            <a class="pub-doi nowrap" href="https://dx.doi.org/{{ publication.doi }}" rel="nofollow" rel="noopener" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ publication.doi }}</a>{% if publication.arxiv %},
-                                <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ publication.arxiv }}" rel="nofollow" rel="noopener" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i> {{ publication.arxiv_long }}</a>
+                            <a class="pub-doi nowrap" href="https://dx.doi.org/{{ publication.doi }}" rel="nofollow noopener" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ publication.doi }}</a>{% if publication.arxiv %},
+                                <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ publication.arxiv }}" rel="nofollow noopener" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i> {{ publication.arxiv_long }}</a>
                             {% endif %}
                         </div>
 
@@ -71,7 +71,7 @@
                                     {% if supp.pdf %}
                                         href="/pdf/{{ supp.pdf }}"
                                     {% else %}
-                                        href="{{ supp.link }}" rel="nofollow" rel="noopener" target="_blank"
+                                        href="{{ supp.link }}" rel="nofollow noopener" target="_blank"
                                     {% endif %}
                                 >
                                 {% if supp.type == "text" %}
@@ -81,7 +81,7 @@
                                 {% endif %}
                                 <span class="pub-supp-title">{{ supp.title }}</span>
                                 </a>{% if not loop.last %}, {% endif %}
-                                <!-- <a class="pub-doi nowrap" href="https://dx.doi.org/{{ supp.doi }}" rel="nofollow" rel="noopener" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ supp.doi }}</a> -->
+                                <!-- <a class="pub-doi nowrap" href="https://dx.doi.org/{{ supp.doi }}" rel="nofollow noopener" target="_blank" aria-label="DOI"><i class="ai ai-doi" aria-hidden="true"></i> {{ supp.doi }}</a> -->
                             {% endfor %}
                         </div>
                         {% endif %}
@@ -104,7 +104,7 @@
 
                     <div class="pub-links">
                         <a class="pub-download nowrap" href="/pdf/{{ preprint.pdf }}"><i class="fas fa-download" aria-hidden="true"></i> {% trans %}Download{% endtrans %}</a>,
-                        <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ preprint.arxiv }}" rel="nofollow" rel="noopener" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i> {{ preprint.arxiv_long }}</a>
+                        <a class="pub-arxiv nowrap" href="https://arxiv.org/abs/{{ preprint.arxiv }}" rel="nofollow noopener" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i> {{ preprint.arxiv_long }}</a>
                     </div>
 
                     {{ list_related(preprint, documents) }}
