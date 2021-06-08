@@ -13,11 +13,18 @@
     margin: 0.2em;
 }
 
-.tag a {
+.language {
+    @extend .tag;
+    background: #555;
+}
+
+.tag a,
+.language a {
     color: getColor(tag);
     text-decoration: none;
     margin: 0.2em 0.2em;
 }
+
 .tag a:hover {
     text-decoration: none;
 }
@@ -53,15 +60,6 @@
 
 .category-misc {
     background: #777;
-}
-
-.language {
-    @extend .tag;
-    background: #555;
-}
-
-.language a {
-    color: getColor(bg-main);
 }
 
 .doi {
