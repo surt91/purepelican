@@ -1,13 +1,13 @@
-$font-brand: 1.4em "Fira Code", monospace;
-$font-title: bold 2.2em "Fira Sans", sans-serif;
-$font-sectiontitle: bold 1.31em "Fira Sans", sans-serif;
-$font-subtitle: 1em "Fira Sans", sans-serif;
-$font-subtitle-mono: 1em "Fira Code", monospace;
-$font-post: 1.2em "Merriweather", serif;
-$font-tag: 1em "Fira Sans", sans-serif;
-$font-quote: italic 1.1em "Merriweather", serif;
+$font-brand: 1.4em "Fira Code", "Fira Mono-fallback", monospace;
+$font-title: bold 2.2em "Fira Sans", "Fira Sans-fallback", sans-serif;
+$font-sectiontitle: bold 1.31em "Fira Sans", "Fira Sans-fallback", sans-serif;
+$font-subtitle: 1em "Fira Sans", "Fira Sans-fallback", sans-serif;
+$font-subtitle-mono: 1em "Fira Code", "Fira Mono-fallback", monospace;
+$font-post: 1.2em "Merriweather", "Merriweather-fallback", serif;
+$font-tag: 1em "Fira Sans", "Fira Sans-fallback", sans-serif;
+$font-quote: italic 1.1em "Merriweather", "Merriweather-fallback", serif;
 $font-superscript: 0.8em;
-$font-code: 1em "Fira Code", monospace;
+$font-code: 1em "Fira Code", "Fira Mono-fallback", monospace;
 
 $border-bottom: 1px solid #888;
 $border: 1px solid rgba(0, 0, 0, 0.15);

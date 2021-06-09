@@ -45,3 +45,18 @@
   font-style: italic;
   font-display: swap;
 }
+
+/* https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/ */
+@font-face {
+  font-family: "Fira Sans-fallback";
+  size-adjust: 102.6%;
+  ascent-override: 94%;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: "Fira Mono-fallback";
+  size-adjust: 134.2%;
+  ascent-override: 60%;
+  src: local("Arial");
+}

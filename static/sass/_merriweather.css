@@ -29,3 +29,11 @@
     font-style: italic;
     font-display: swap;
 }
+
+/* https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/ */
+@font-face {
+    font-family: "Merriweather-fallback";
+    size-adjust: 122.87%;
+    ascent-override: 74%;
+    src: local("Times New Roman");
+}
