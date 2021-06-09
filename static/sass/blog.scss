@@ -101,6 +101,7 @@ body {
 
 h3, h2 {
     color: getColor(title);
+    overflow-x: scroll;
 }
 
 h3 {
