@@ -1,6 +1,7 @@
 @import 'functions';
 
-.tag {
+.tag,
+.language {
     font: $font-tag;
     list-style: none;
     display: inline-block;
@@ -11,11 +12,6 @@
 
     padding: 0.4em 0.2em 0.2em 0.2em;
     margin: 0.2em;
-}
-
-.language {
-    @extend .tag;
-    background: #555;
 }
 
 .tag a,
