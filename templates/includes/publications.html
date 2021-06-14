@@ -25,7 +25,7 @@
                         title="{% trans %}Video{% endtrans %}: {{ related.title }}">
                         <i class="fab fa-youtube fa-fw" aria-hidden="true"></i>
                     {% elif related.type == "data" %}
-                        title="{% trans %}Video{% endtrans %}: {{ related.title }}">
+                        title="{% trans %}Data{% endtrans %}: {{ related.title }}">
                         <i class="fas fa-database fa-fw" aria-hidden="true"></i>
                     {% endif %}
                         {{ related.short }}
@@ -78,6 +78,8 @@
                                     <i class="fas fa-file-alt fa-fw" aria-hidden="true" title="{% trans %}Text{% endtrans %}"></i>
                                 {% elif supp.type == "code" %}
                                     <i class="fas fa-code fa-fw" aria-hidden="true" title="{% trans %}Code{% endtrans %}"></i>
+                                {% elif supp.type == "Video" %}
+                                    <i class="fas fa-play fa-fw" aria-hidden="true" title="{% trans %}Video{% endtrans %}"></i>
                                 {% endif %}
                                 <span class="pub-supp-title">{{ supp.title }}</span>
                                 </a>{% if not loop.last %}, {% endif %}
