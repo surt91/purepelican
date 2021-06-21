@@ -12,8 +12,10 @@
     <h2>{% trans %}Publications{% endtrans %}</h2>
     {{ p.publications(publication_details, DOCUMENTS) }}
 
+    {% if preprint_details %}
     <h2>{% trans %}Preprints{% endtrans %}</h2>
     {{ p.preprints(preprint_details, DOCUMENTS, publication_details|length + 1) }}
+    {% endif %}
 
     <h2>{% trans %}Timeline{% endtrans %}{{ t.settings() }}</h2>
     {{ t.timeline(EVENTS, DOCUMENTS) }}
