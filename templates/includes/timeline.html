@@ -27,8 +27,7 @@
                     {% if event.teaching %}
                     {{ _(TEACHING_TYPES[event.teaching]) }}:
                     {% endif %}
-                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow noopener" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %},
-                    {{ event.place }}, {{ _(event.country) }}
+                    {{ event.name }}{% if event.link %} <a class="timeline-link" href="{{ event.link }}" rel="nofollow noopener" target="_blank"><i class="link-symbol fas fa-external-link-alt"></i></a>{% endif %}{% if event.place %}, {{ event.place }}, {{ _(event.country) }}{% endif %}
                 </div>
                 {% for id in event.presentations %}
                     {% set presentation = documents[id] %}
