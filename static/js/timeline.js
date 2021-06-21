@@ -6,7 +6,9 @@ const cat_defaults = {
     workshop: "false",
     summerschool: "false",
     teaching: "false",
-    prize: "false"
+    prize: "false",
+    media: "false",
+    organization: "false"
 };
 
 document.addEventListener("DOMContentLoaded", init_timeline);

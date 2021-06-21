@@ -12,7 +12,9 @@ TIMELINE_CATEGORIES = {
     "workshop": ("Workshop", "fa-comments", "Small conferences without parallel sessions."),
     "summerschool": ("Summer school", "fa-chalkboard", "Participant of a summer school."),
     "teaching": ("Teaching", "fa-chalkboard-teacher", "Any kind of teaching at a university."),
-    "prize": ("Prize", "fa-trophy", "Prizes and stipends.")
+    "prize": ("Prize", "fa-trophy", "Prizes and stipends."),
+    "media": ("Media", "fa-broadcast-tower", "Mentions in media."),
+    "organization": ("Organization", "fa-sitemap", "Organizing events."),
 }
 
 TEACHING_TYPES = {
