@@ -69,6 +69,12 @@ msgstr "Lehre"
 msgid "Prize"
 msgstr "Preis"
 
+msgid "Media"
+msgstr "Medien"
+
+msgid "Organization"
+msgstr "Organisation"
+
 msgid "Lab course"
 msgstr "Laborpraktikum"
 
