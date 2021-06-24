@@ -101,7 +101,8 @@ body {
 
 h3, h2 {
     color: getColor(title);
-    overflow-x: hidden;
+    // allow arbitrary breaks, instead of destroying the layout
+    overflow-wrap: break-word;
 }
 
 h3 {
