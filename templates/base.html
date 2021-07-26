@@ -143,7 +143,8 @@
 </div>
 
 {% block script %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.4/es5/tex-chtml.min.js" integrity="sha512-TDee2ISC6sQ6otdlKoFKck/giOHVTT0gfOKzM62qBPeyvf2qMpVVzHyGdqjrefh/VoG5dIzgYSy0IHEPwN8g8w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/theme/js/mathjax-config.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg.min.js" id="MathJax-script" defer integrity="sha512-K90Mc/rYzO+mxOtUsnp8quUB+3T9o5L0QIk6C9O5eJ3juahzkWz751FnYs7BHtHkkNV4YLe8kvYGgK/oSHln1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {% assets filters="rjsmin", output="js/cthulhu.min.js",
             "fx/rythm.js",
             "fx/totally_serious_script.js"
