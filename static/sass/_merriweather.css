@@ -33,7 +33,8 @@
 /* https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/ */
 @font-face {
     font-family: "Merriweather-fallback";
-    size-adjust: 122.87%;
-    ascent-override: 74%;
-    src: local("Times New Roman");
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.85px;
+    src: local("Georgia");
 }
