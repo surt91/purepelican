@@ -3,13 +3,13 @@ img {
     margin: auto;
     max-width: 100%;
     height: auto;
-    vertical-align: middle;
 }
 
 .icon > img,
 .icon {
     float: right;
     height: 200px;
+    width: auto;
     border: 0px;
     padding-left: 12px;
 }
