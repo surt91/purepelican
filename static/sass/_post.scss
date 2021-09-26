@@ -45,7 +45,7 @@
     color: getColor(sectiontitle);
 }
 
-.post-content blockquote:before {
+.post-content blockquote::before {
     color: getColor(subtitle);
     content: '\f10d';
     font: 18px "Font Awesome 5 Free";
@@ -54,6 +54,10 @@
     margin-left: -2em;
     text-decoration: inherit;
     position:absolute;
+}
+
+blockquote::before {
+    display: none;
 }
 
 .post-content blockquote {
