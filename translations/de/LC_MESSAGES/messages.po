@@ -123,11 +123,11 @@ msgstr "Jegliche universitäre Lehre."
 msgid "Prizes and stipends."
 msgstr "Preise und Stipendien."
 
-msgid "Co-supervision Bachelor thesis."
-msgstr "Co-Betreuung eines Bachelor-Studenten."
+msgid "Co-supervision Bachelor thesis"
+msgstr "Co-Betreuung eines Bachelor-Studenten"
 
 msgid "Co-supervision Master thesis"
-msgstr "Co-Betreuung eines Master-Studenten."
+msgstr "Co-Betreuung eines Master-Studenten"
 
 msgid "authors ordered alphabetically"
 msgstr "Autoren alphabetisch geordnet"
