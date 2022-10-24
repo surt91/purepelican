@@ -1,3 +1,10 @@
+
+@media (prefers-color-scheme: dark) {
+    img.invertable {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+
 img {
     display: block;
     margin: auto;
