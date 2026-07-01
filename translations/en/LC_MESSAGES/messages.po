@@ -42,6 +42,10 @@ msgstr "Search"
 msgid "Vollständiges Archiv von"
 msgstr "Complete Archive of"
 
+#: templates/_includes/post.html:19
+msgid "von"
+msgstr "by"
+
 #: templates/article.html:29 templates/index.html:41
 msgid "Neuer"
 msgstr "Newer"

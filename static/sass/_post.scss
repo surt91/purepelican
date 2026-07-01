@@ -27,6 +27,17 @@
     padding-bottom: 5px;
 }
 
+.post-author {
+    display: inline-block;
+    font-style: normal;
+
+    &::after {
+        content: '\00b7';
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
+
 .post-time {
     display: inline-block;
     margin-right: 0.5em;
